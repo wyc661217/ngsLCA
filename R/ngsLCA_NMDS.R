@@ -8,16 +8,17 @@
 #' @param dimension dimension of the NMDS; default is 3.
 #' @param trymax maximum number of random starts in search of convergent solutions for NMDS; default is 100.
 #'
-#' @import vegan
+#' @importFrom vegan metaMDS stressplot
+#' @importFrom  grDevices pdf dev.off
+#' @importFrom utils read.csv
 #' @import ggplot2
-#' @return
 #' @export
 #'
 #' @examples
-#' ngsLCA_NMDS(path="working_directory/",
+#' \dontrun{ngsLCA_NMDS(path="working_directory/",
 #'             run="run01",
 #'             dimension=3,
-#'             trymax=1000)
+#'             trymax=1000)}
 #'
 #'
 #' ## This will perform NMDS on the complete taxa
@@ -68,6 +69,7 @@ ngsLCA_NMDS=function(path,
       cat(paste("\n\n\t-> For ", OutName, ", number of samples or taxa is less than or equal to the NMDS dimensions; NMDS not performed.\n\n",sep = ""))
     }else{
 
+      MDS1 = MDS2 = NULL
       NMDS = metaMDS(DF, k=dimension, trymax=trymax) #NMDS cluster
       saveRDS(NMDS, file = paste(path, run, "/NMDS/", OutName, "_NMDS_data.rda", sep=""))
 

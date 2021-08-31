@@ -8,7 +8,7 @@
 #' @param rank.name a comma seprated vector listing the taxonomic ranks that will be used for classifying taxa profiles; default is "species,genus,family"
 #'
 #' @importFrom tidyr separate %>%
-#' @return
+#' @importFrom utils read.csv write.table
 #' @export
 #'
 #' @examples
@@ -34,6 +34,10 @@ ngsLCA_rank=function(path,
   if (!grepl('/$', path)) {
     path = paste(path,"/",sep="")
   }
+
+
+  #local variable
+  taxa = NULL
 
 
   #whether ngsLCA_profile performed

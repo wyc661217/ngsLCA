@@ -11,7 +11,7 @@
 #' @param threshold.3_control for generating contamination list, minimum sum of reads across all blank controls required for keeping a taxon; default is 5.
 #'
 #' @importFrom tidyr separate %>%
-#' @return
+#' @importFrom utils read.csv read.delim write.table
 #' @export
 #'
 #' @examples
@@ -42,6 +42,10 @@ ngsLCA_deContam = function(path,
   if (!grepl('/$', path)) {
     path = paste(path,"/",sep="")
   }
+
+
+  #local variable
+  taxa = NULL
 
 
   #data read-in

@@ -20,9 +20,6 @@ ngsLCA_group(
 
 \item{threshold.perGroup}{minimum reads percentage (to the total reads number of each group) required for confirming a taxon in each group of each sample, ranging from 0 to 1.}
 }
-\value{
-
-}
 \description{
 Group the combined taxa profile into user-defined taxa units. Results will be in 'pth/run/taxonomic_profiles/taxa_groups/'.
 }

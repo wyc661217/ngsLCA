@@ -9,7 +9,8 @@
 #' @param metadata path to sample metadata, an example at github.com/miwipe/ngsLCA/blob/master/R_script/metadata.txt, optional.
 #'
 #' @importFrom tidyr separate %>%
-#' @return
+#' @importFrom stats aggregate
+#' @importFrom utils read.csv write.table
 #' @export
 #'
 #' @examples
@@ -35,6 +36,10 @@ ngsLCA_profile = function(path,
   if (!grepl('/$', path)) {
     path = paste(path,"/",sep="")
   }
+
+
+  #local variable
+  taxa = NULL
 
 
   #list lca files

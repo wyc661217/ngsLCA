@@ -26,9 +26,6 @@ ngsLCA_deContam(
 
 \item{threshold.3_control}{for generating contamination list, minimum sum of reads across all blank controls required for keeping a taxon; default is 5.}
 }
-\value{
-
-}
 \description{
 Generate a contamination list from blank control lca files, and subtract listed taxa from the combined taxa profile. Running this function will update the existing 'complete_profile.txt'.
 }

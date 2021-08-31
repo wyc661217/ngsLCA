@@ -15,17 +15,14 @@ ngsLCA_NMDS(path, run = "run01", dimension = 3, trymax = 100)
 
 \item{trymax}{maximum number of random starts in search of convergent solutions for NMDS; default is 100.}
 }
-\value{
-
-}
 \description{
 Perform Non-metric Multidimensional Scaling (NMDS) on taxa profiles. Results will be in 'path/run/NMDS/'. See vegan::metaMDS for details.
 }
 \examples{
-ngsLCA_NMDS(path="working_directory/",
+\dontrun{ngsLCA_NMDS(path="working_directory/",
             run="run01",
             dimension=3,
-            trymax=1000)
+            trymax=1000)}
 
 
 ## This will perform NMDS on the complete taxa

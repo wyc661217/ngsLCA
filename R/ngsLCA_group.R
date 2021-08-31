@@ -9,7 +9,7 @@
 #' @param threshold.perGroup minimum reads percentage (to the total reads number of each group) required for confirming a taxon in each group of each sample, ranging from 0 to 1.
 #'
 #' @importFrom tidyr separate %>%
-#' @return
+#' @importFrom utils read.csv write.table
 #' @export
 #'
 #' @examples
@@ -35,6 +35,10 @@ ngsLCA_group = function(path,
   if (!grepl('/$', path)) {
     path = paste(path,"/",sep="")
   }
+
+
+  #local variable
+  taxa = NULL
 
 
   #whether ngsLCA_profile performed

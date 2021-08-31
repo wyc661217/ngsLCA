@@ -7,7 +7,7 @@
 #' @param run name of the run, default is "run01".
 #'
 #' @import ggplot2
-#' @return
+#' @importFrom utils read.csv read.delim write.table
 #' @export
 #'
 #' @examples
@@ -38,6 +38,10 @@ ngsLCA_count=function(path,
   }else{
     cat("\n\n\t-> Count reads and taxa numbers.\n\n")
   }
+
+
+  #local variables
+  step = number = NULL
 
 
   #original taxa profile

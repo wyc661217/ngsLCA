@@ -13,9 +13,6 @@ ngsLCA_stratplot(path, run = "run01", taxa.number = 10)
 
 \item{taxa.number}{maximum number of taxa will be shown in stratplots; default is 10.}
 }
-\value{
-
-}
 \description{
 Generate stratplots for taxa profiles into 'path/run/stratplot/' to show the reads abundance.
 }

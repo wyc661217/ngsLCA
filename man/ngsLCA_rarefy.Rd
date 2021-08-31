@@ -11,9 +11,6 @@ ngsLCA_rarefy(path, run = "run01")
 
 \item{run}{name of the run, default is "run01".}
 }
-\value{
-
-}
 \description{
 Generate rarefaction curves for taxa profiles in 'path/run/rarefaction/'. See vegan::rarefy for details.
 }

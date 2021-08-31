@@ -11,9 +11,6 @@ ngsLCA_count(path, run = "run01")
 
 \item{run}{name of the run, default is "run01".}
 }
-\value{
-
-}
 \description{
 Count the reads number and taxa number after each filtering and de-contamination, as well as in each taxa group. Results will be generated into 'path/run/counts/'
 }

@@ -6,8 +6,9 @@
 #' @param path working directory, same to 'ngsLCA_profile'.
 #' @param run name of the run, default is "run01".
 #'
-#' @import vegan
-#' @return
+#' @importFrom vegan rarefy specnumber rarecurve
+#' @importFrom utils read.csv
+#' @importFrom graphics abline
 #' @export
 #'
 #' @examples

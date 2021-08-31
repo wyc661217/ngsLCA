@@ -15,9 +15,6 @@ ngsLCA_profile(path, run = "run01", remove.sample = NULL, metadata = NULL)
 
 \item{metadata}{path to sample metadata, an example at github.com/miwipe/ngsLCA/blob/master/R_script/metadata.txt, optional.}
 }
-\value{
-
-}
 \description{
 Read lca files in the appointed directory to generate a combined taxa profile named 'complete_profile.txt' in folder 'path/run/taxonomic_profiles/'.
 }

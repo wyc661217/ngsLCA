@@ -13,9 +13,6 @@ ngsLCA_heatmap(path, run = "run01", taxa.number = 30)
 
 \item{taxa.number}{maximum number of taxa will be shown in heatmaps; default is 30.}
 }
-\value{
-
-}
 \description{
 Generate heatmaps for taxa profiles into 'path/run/heatmap/' to show the reads abundance of each taxon.
 }

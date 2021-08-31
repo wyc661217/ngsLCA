@@ -8,9 +8,9 @@
 #' @param taxa.number maximum number of taxa will be shown in stratplots; default is 10.
 #'
 #' @import ggplot2
-#' @import ggthemes
-#' @import grid
-#' @return
+#' @importFrom grid grid.newpage pushViewport viewport grid.layout
+#' @importFrom utils read.csv
+#' @importFrom ggthemes theme_tufte
 #' @export
 #'
 #' @examples
@@ -36,6 +36,10 @@ ngsLCA_stratplot=function(path,
   }
 
 
+  #local variables
+  taxa = name = plot1 = plot2 = plot3 = plot4 = plot5 = plot6 = plot7 = plot8 = plot9 = plot10 = NULL
+
+
   #whether ngsLCA_profile performed
   if (length(dir(paste(path, run, "/intermediate/", sep=""), pattern =  "taxa_profile_v1.txt")) == 0) {
     cat(paste("\n\n\t-> Error: required input file not found under '", run, "' folder, please run 'ngsLCA_profile' first.\n\n",
@@ -56,10 +60,8 @@ ngsLCA_stratplot=function(path,
 
   # mutiplot function
   multiplot <- function(..., plotlist = NULL, file, cols = 1, layout = NULL) {
-    require(grid)
 
     plots <- c(list(...), plotlist)
-
     numPlots = length(plots)
 
     if (is.null(layout)) {
@@ -89,7 +91,7 @@ ngsLCA_stratplot=function(path,
 
     plots =list()
 
-    if (any(is.na(as.numeric(rownames(DF))))){
+    if (any(is.na(suppressWarnings(as.numeric(rownames(DF)))))){
 
       for (i in 1:dim(DF)[2]) {
 
@@ -135,7 +137,7 @@ ngsLCA_stratplot=function(path,
     }
 
 
-    if (all(!is.na(as.numeric(rownames(DF))))){
+    if (all(!is.na(suppressWarnings(as.numeric(rownames(DF)))))){
 
       for (i in 1:dim(DF)[2]) {
 

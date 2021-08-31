@@ -11,7 +11,7 @@
 #' @param threshold.3 minimum sum of reads across all samples required for confirming a taxon in the combined taxa profile; default is 5.
 #'
 #' @importFrom tidyr separate %>%
-#' @return
+#' @importFrom utils read.csv read.delim write.table
 #' @export
 #'
 #' @examples
@@ -41,6 +41,10 @@ ngsLCA_filter = function(path,
   if (!grepl('/$', path)) {
     path = paste(path,"/",sep="")
   }
+
+
+  #local variable
+  taxa = NULL
 
 
   #read-in file

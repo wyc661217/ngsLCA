@@ -6,7 +6,7 @@
 #' @param path working directory, same to 'ngsLCA_profile'.
 #' @param run name of the run, default is "run01".
 #'
-#' @return
+#' @importFrom utils read.csv write.table
 #' @export
 #'
 #' @examples

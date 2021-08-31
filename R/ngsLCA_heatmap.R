@@ -7,10 +7,10 @@
 #' @param run name of the run, default is "run01".
 #' @param taxa.number maximum number of taxa will be shown in heatmaps; default is 30.
 #'
-#' @import circlize
-#' @import ComplexHeatmap
-#' @import grid
-#' @return
+#' @importFrom circlize colorRamp2
+#' @importFrom ComplexHeatmap Heatmap
+#' @importFrom grid gpar unit
+#' @importFrom utils read.csv
 #' @export
 #'
 #' @examples

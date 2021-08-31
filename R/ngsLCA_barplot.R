@@ -9,7 +9,7 @@
 #'
 #' @import ggplot2
 #' @importFrom reshape melt
-#' @return
+#' @importFrom utils read.csv
 #' @export
 #'
 #' @examples
@@ -51,6 +51,10 @@ ngsLCA_barplot=function(path,
   }else{
     dir.create(paste(path, run, "/barplot", sep=""))
   }
+
+
+  #local variables
+  variable = value = taxa = NULL
 
 
   #function for preparing data

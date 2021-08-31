@@ -11,9 +11,6 @@ ngsLCA_meganFile(path, run = "run01")
 
 \item{run}{name of the run, default is "run01".}
 }
-\value{
-
-}
 \description{
 Generate files that can be inputted into Megan for taxa profiling. Results will be in 'path/run/megan/'
 }
