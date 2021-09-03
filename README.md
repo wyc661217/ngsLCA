@@ -12,11 +12,24 @@ profiles.
 
 ## Installation
 
-You can install the released version of ngsLCA from
+Install the released version of ngsLCA from
 [CRAN](https://CRAN.R-project.org) with:
 
 ``` r
 install.packages("ngsLCA")
+```
+
+Install the released version of ngsLCA from
+[github](https://github.com/wyc661217/ngsLCA) with:
+
+``` r
+remotes::install_github("wyc661217/ngsLCA")
+```
+
+or:
+
+``` r
+devtools::install_github("wyc661217/ngsLCA")
 ```
 
 ## Example workflow
