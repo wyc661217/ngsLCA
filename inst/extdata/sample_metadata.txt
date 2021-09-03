@@ -1,0 +1,3 @@
+#file_name	SampleID	Age/depth/rank
+sample1.lca	S1	1444
+sample2.lca	S2	3112

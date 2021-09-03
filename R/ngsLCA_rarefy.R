@@ -3,7 +3,7 @@
 #'
 #' @description Generate rarefaction curves for taxa profiles in 'path/run/rarefaction/'. See vegan::rarefy for details.
 #'
-#' @param path working directory, same to 'ngsLCA_profile'.
+#' @param path working directory, same to \code{\link{ngsLCA_profile}}.
 #' @param run name of the run, default is "run01".
 #'
 #' @importFrom vegan rarefy specnumber rarecurve
@@ -12,13 +12,13 @@
 #' @export
 #'
 #' @examples
-#' ngsLCA_rarefy(path="working_directory/",
+#' ngsLCA_rarefy(path=system.file("extdata","lca_files",package="ngsLCA"),
 #'               run="run01")
 #'
 #' ## This will generate rarefaction curves for the
 #' ## complete taxa profile as well as taxa groups
 #' ## and ranks (if available) of 'run01'. Results
-#' ## will be in 'working_directory/run01/rarefaction/'.
+#' ## will be in 'extdata/lca_files/run01/rarefaction/'.
 #'
 #'
 ngsLCA_rarefy=function(path,

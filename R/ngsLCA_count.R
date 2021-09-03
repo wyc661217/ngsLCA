@@ -3,7 +3,7 @@
 #'
 #' @description Count the reads number and taxa number after each filtering and de-contamination, as well as in each taxa group. Results will be generated into 'path/run/counts/'
 #'
-#' @param path working directory, same to 'ngsLCA_profile'.
+#' @param path working directory, same to \code{\link{ngsLCA_profile}}.
 #' @param run name of the run, default is "run01".
 #'
 #' @import ggplot2
@@ -11,13 +11,13 @@
 #' @export
 #'
 #' @examples
-#' ngsLCA_count(path="working_directory/",
+#' ngsLCA_count(path=system.file("extdata","lca_files",package="ngsLCA"),
 #'              run="run01")
 #'
 #'
 #' ## This will generate tables and figures showing
 #' ## the numbers of reads and taxa for "run01". Results
-#' ## will be in 'working_directory/run01/counts/'.
+#' ## will be in 'extdata/lca_files/run01/counts/'.
 #'
 #'
 ngsLCA_count=function(path,

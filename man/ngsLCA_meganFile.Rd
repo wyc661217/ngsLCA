@@ -7,7 +7,7 @@
 ngsLCA_meganFile(path, run = "run01")
 }
 \arguments{
-\item{path}{working directory, same to 'ngsLCA_profile'.}
+\item{path}{working directory, same to \code{\link{ngsLCA_profile}}.}
 
 \item{run}{name of the run, default is "run01".}
 }
@@ -15,14 +15,14 @@ ngsLCA_meganFile(path, run = "run01")
 Generate files that can be inputted into Megan for taxa profiling. Results will be in 'path/run/megan/'
 }
 \examples{
-ngsLca_meganFile(path="working_directory/",
+ngsLCA_meganFile(path=system.file("extdata","lca_files",package="ngsLCA"),
                  run="run01")
 
 
 ## This will generate Megan format taxa profiles for
 ## the complete taxa profile as well as taxa groups
 ## and ranks (if available) of 'run01'. Resutls will
-## be in working_directory/run01/megan/'. These files
+## be in extdata/lca_files/run01/megan/'. These files
 ## can be directly used as input csv files in Megan
 ## for taxa profiling.
 

@@ -13,22 +13,21 @@ ngsLCA_profile(path, run = "run01", remove.sample = NULL, metadata = NULL)
 
 \item{remove.sample}{a comma separated vector listing file names indicating samples that will NOT be included for analysis, optional.}
 
-\item{metadata}{path to sample metadata, an example at github.com/miwipe/ngsLCA/blob/master/R_script/metadata.txt, optional.}
+\item{metadata}{path to sample metadata, optional. The metadata should be a tab separated txt file, with the first column being lca file names, 2nd column being sample ID (sample names will be shown in the generated files), and 3rd column being age, depth, or the rank of samples (will be used for ordering samples in the generated files; must be numeric). An example for metadata can be found at github.com/miwipe/ngsLCA/blob/master/R_script/metadata.txt.}
 }
 \description{
 Read lca files in the appointed directory to generate a combined taxa profile named 'complete_profile.txt' in folder 'path/run/taxonomic_profiles/'.
 }
 \examples{
-ngsLCA_profile(path="working_directory/",
+ngsLCA_profile(path=system.file("extdata","lca_files",package="ngsLCA"),
                run="run01",
-               remove.sample="sample1.lca,sample2",
-               metadata="path_to_metadata/metadata.txt")
+               metadata=system.file("extdata","sample_metadata.txt",package="ngsLCA"))
 
-## This will combine all lca files in "working_directory/"
+## This will combine all lca files in "extdata/lca_files/"
 ## to generate a file named 'complete_profile.txt' in
-## 'working_directory/run01/taxonomic_profiles/', with
-## replacing the file names by sample names supplied in
-## metadata.txt, and removing sample1 and sample2.
+## 'extdata/lca_files/run01/taxonomic_profiles', with
+## replacing the file names by sample names supplied
+## in sample_metadata.txt.
 
 
 }

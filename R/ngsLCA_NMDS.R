@@ -3,7 +3,7 @@
 #'
 #' @description Perform Non-metric Multidimensional Scaling (NMDS) on taxa profiles. Results will be in 'path/run/NMDS/'. See vegan::metaMDS for details.
 #'
-#' @param path working directory, same to 'ngsLCA_profile'.
+#' @param path working directory, same to \code{\link{ngsLCA_profile}}.
 #' @param run name of the run, default is "run01".
 #' @param dimension dimension of the NMDS; default is 3.
 #' @param trymax maximum number of random starts in search of convergent solutions for NMDS; default is 100.
@@ -15,16 +15,16 @@
 #' @export
 #'
 #' @examples
-#' \dontrun{ngsLCA_NMDS(path="working_directory/",
+#' ngsLCA_NMDS(path=system.file("extdata","lca_files",package="ngsLCA"),
 #'             run="run01",
 #'             dimension=3,
-#'             trymax=1000)}
+#'             trymax=1000)
 #'
 #'
 #' ## This will perform NMDS on the complete taxa
 #' ## profile as well as taxa groups and ranks
 #' ## (if available) of run01'. Results will be in
-#' ## 'working_directory/run01/NMDS/'.
+#' ## 'extdata/lca_files/run01/NMDS/'.
 #'
 #'
 ngsLCA_NMDS=function(path,

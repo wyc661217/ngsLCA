@@ -7,7 +7,7 @@
 ngsLCA_stratplot(path, run = "run01", taxa.number = 10)
 }
 \arguments{
-\item{path}{working directory, same to 'ngsLCA_profile'.}
+\item{path}{working directory, same to \code{\link{ngsLCA_profile}}.}
 
 \item{run}{name of the run, default is "run01".}
 
@@ -17,15 +17,15 @@ ngsLCA_stratplot(path, run = "run01", taxa.number = 10)
 Generate stratplots for taxa profiles into 'path/run/stratplot/' to show the reads abundance.
 }
 \examples{
-ngsLCA_stratplot(path="working_directory/",
+ngsLCA_stratplot(path=system.file("extdata","lca_files",package="ngsLCA"),
                  run="run01",
                  taxa.number=10)
 
 
 ## This will generate stratplots for the complete taxa profile
-## as well as taxa groups and ranks (if available) of 'run01'
-## in 'working_directory/run01/stratplot/', with showing the 10
-## most abundant taxa in each profile.
+## as well as taxa groups and ranks (if available) of 'run01',
+## with showing the 10 most abundant taxa in each profile.
+## Results will be in 'extdata/lca_files/run01/stratplot/'.
 
 
 }

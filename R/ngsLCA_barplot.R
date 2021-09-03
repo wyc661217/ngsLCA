@@ -3,7 +3,7 @@
 #'
 #' @description Generate barplots for taxa profiles into 'path/run/barplot/' to show the reads abundance.
 #'
-#' @param path working directory, same to 'ngsLCA_profile'.
+#' @param path working directory, same to \code{\link{ngsLCA_profile}}.
 #' @param run name of the run, default is "run01".
 #' @param taxa.number maximum number of taxa will be shown in barplots; default is 10.
 #'
@@ -13,14 +13,14 @@
 #' @export
 #'
 #' @examples
-#' ngsLCA_barplot(path="working_directory/",
+#' ngsLCA_barplot(path=system.file("extdata","lca_files",package="ngsLCA"),
 #'                run="run01",
 #'                taxa.number=10)
 #'
 #'
 #' ## This will generate barplots for the complete taxa profile
 #' ## as well as taxa groups and ranks (if available) of 'run01'
-#' ## in 'working_directory/run01/barplot/', with showing the 10
+#' ## in 'extdata/lca_files/run01/barplot/', with showing the 10
 #' ## most abundant taxa in each profile.
 #'
 #'

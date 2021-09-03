@@ -7,7 +7,7 @@
 ngsLCA_heatmap(path, run = "run01", taxa.number = 30)
 }
 \arguments{
-\item{path}{working directory, same to 'ngsLCA_profile'.}
+\item{path}{working directory, same to \code{\link{ngsLCA_profile}}.}
 
 \item{run}{name of the run, default is "run01".}
 
@@ -17,14 +17,14 @@ ngsLCA_heatmap(path, run = "run01", taxa.number = 30)
 Generate heatmaps for taxa profiles into 'path/run/heatmap/' to show the reads abundance of each taxon.
 }
 \examples{
-ngsLCA_heatmap(path="working_directory/",
+ngsLCA_heatmap(path=system.file("extdata","lca_files",package="ngsLCA"),
                run="run01",
                taxa.number=20)
 
 
 ## This will generate heatmaps for the complete taxa profile
 ## as well as taxa groups and ranks (if available) of 'run01'
-## in 'working_directory/run01/heatmap/', with showing the 20
+## in 'extdata/lca_files/run01/heatmap/', with showing the 20
 ## most abundant taxa in each profile.
 
 

@@ -3,7 +3,7 @@
 #'
 #' @description Generate a contamination list from blank control lca files, and subtract listed taxa from the combined taxa profile. Running this function will update the existing 'complete_profile.txt'.
 #'
-#' @param path working directory, same to 'ngsLCA_profile'.
+#' @param path working directory, same to \code{\link{ngsLCA_profile}}.
 #' @param run name of the run, default is "run01".
 #' @param control_path path to the directory that contains all blank control lca files.
 #' @param threshold.1_control for generating contamination list, minimum reads number required for keeping a taxon in each blank control; default is 2.
@@ -15,18 +15,17 @@
 #' @export
 #'
 #' @examples
-#' ngsLCA_deContam(path="working_directory/",
+#' ngsLCA_deContam(path=system.file("extdata","lca_files",package="ngsLCA"),
 #'                 run="run01",
-#'                 control_path="working_directory/blank_control_folder/",
-#'                 threshold.1_control=2,
+#'                 control_path=system.file("extdata","blank_controls",package="ngsLCA"),
+#'                 threshold.1_control=0,
 #'                 threshold.2_control=0,
-#'                 threshold.3_control=5)
+#'                 threshold.3_control=0)
 #'
-#' ## This will combine the blank control lca files within
-#' ## folder "working_directory/blank_control_folder/"
-#' ## to generate a contamination list, and then filter
-#' ## this list using the 3 control thresholds supplied.
-#' ## The listed taxa will be subtracted from the combined
+#' ## This will combine the blank control lca files within folder
+#' ## "extdata/blank_controls/" to generate a contamination list,
+#' ## and then filter this list using the 3 control thresholds
+#' ## supplied. The listed taxa will be subtracted from the combined
 #' ## taxa profile.
 #'
 #'
@@ -84,7 +83,7 @@ ngsLCA_deContam = function(path,
       for (i in 1:length(FileList)) {
 
         CON2.1 =  read.csv(paste(control_path, FileList[i], sep=""), header=F, sep="\t", stringsAsFactors=F, fill=T,
-                          col.names = paste0("V",seq_len(60)), skip=1)
+                          col.names = paste0("V",seq_len(60)), comment.char = "#")
 
         if(dim(CON2.1)[1]>0){
 
@@ -122,7 +121,11 @@ ngsLCA_deContam = function(path,
   DF2 = read.delim(paste(path, run, "/intermediate/", "contamination_list_v1.txt", sep=""),
                    stringsAsFactors=FALSE, header = T, check.names = F)
 
-  DF2.1 = as.data.frame(sapply(DF2[,-1], as.numeric))
+  DF2.1 = as.data.frame(DF2[,-1])
+  for (i in 1:dim(DF2.1)[2]) {
+    DF2.1[,i] = as.numeric(DF2.1[,i])
+  }
+
   colnames(DF2.1) = colnames(DF2)[-1]
   DF2.1[DF2.1 < thr1b] = 0
   DF2.1$taxa  = DF2$taxa

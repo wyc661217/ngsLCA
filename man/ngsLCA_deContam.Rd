@@ -14,7 +14,7 @@ ngsLCA_deContam(
 )
 }
 \arguments{
-\item{path}{working directory, same to 'ngsLCA_profile'.}
+\item{path}{working directory, same to \code{\link{ngsLCA_profile}}.}
 
 \item{run}{name of the run, default is "run01".}
 
@@ -30,18 +30,17 @@ ngsLCA_deContam(
 Generate a contamination list from blank control lca files, and subtract listed taxa from the combined taxa profile. Running this function will update the existing 'complete_profile.txt'.
 }
 \examples{
-ngsLCA_deContam(path="working_directory/",
+ngsLCA_deContam(path=system.file("extdata","lca_files",package="ngsLCA"),
                 run="run01",
-                control_path="working_directory/blank_control_folder/",
-                threshold.1_control=2,
+                control_path=system.file("extdata","blank_controls",package="ngsLCA"),
+                threshold.1_control=0,
                 threshold.2_control=0,
-                threshold.3_control=5)
+                threshold.3_control=0)
 
-## This will combine the blank control lca files within
-## folder "working_directory/blank_control_folder/"
-## to generate a contamination list, and then filter
-## this list using the 3 control thresholds supplied.
-## The listed taxa will be subtracted from the combined
+## This will combine the blank control lca files within folder
+## "extdata/blank_controls/" to generate a contamination list,
+## and then filter this list using the 3 control thresholds
+## supplied. The listed taxa will be subtracted from the combined
 ## taxa profile.
 
 

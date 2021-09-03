@@ -1,0 +1,217 @@
+taxa_ID	taxa_name	taxonomic_rank	S1	S2
+1	root	no rank	68	34
+1009846	Burkholderia cepacia GG4	no rank	1	0
+1034889	Variovorax sp. HW608	species	1	0
+1036672	Advenella kashmirensis WT001	no rank	0	2
+1038929	Streptomyces xinghaiensis S187	no rank	0	8
+105219	Ralstonia mannitolilytica	species	1	0
+106634	Thioalkalivibrio versutus	species	1	0
+1076	Rhodopseudomonas palustris	species	0	1
+1081940	Pseudomonas putida B6-2	no rank	1	0
+1108595	Chromobacterium vaccinii	species	1	0
+1128334	Sinorhizobium fredii CCBAU 83666	no rank	1	0
+1163617	Sulfuricella denitrificans skB26	no rank	1	0
+1168034	Draconibacterium orientale	species	1	0
+1172567	Streptomyces globisporus C-1027	no rank	0	1
+119060	Burkholderiaceae	family	1	0
+1196083	Snodgrassella alvi	species	1	0
+1196835	Pseudomonas stutzeri CCUG 29243	no rank	0	107
+1214242	Streptomyces collinus Tu 365	no rank	0	1
+1223802	Sulfuritalea hydrogenivorans sk43H	no rank	2	0
+1224	Proteobacteria	phylum	9	2
+1239516	uncultured bacterium contig00219	species	1	0
+1245526	Pseudomonas guangdongensis	species	0	1
+1274631	Bradyrhizobium icense	species	2	0
+12916	Acidovorax	genus	1	0
+1300347	Nocardioides dokdonensis FR1436	no rank	0	1
+1303692	Streptomyces fulvissimus DSM 40593	no rank	0	2
+131567	cellular organisms	no rank	22	11
+133	Methylocystis	genus	1	0
+135487	Nocardia cyriacigeorgica	species	0	2
+135614	Xanthomonadales	order	0	1
+135621	Pseudomonadaceae	family	0	1
+1357915	Arthrobacter sp. QXT-31	species	1	0
+136846	Pseudomonas stutzeri group	species group	0	2
+1430440	Magnetospirillum gryphiswaldense MSR-1 v2	no rank	1	0
+1437010	Boreoeutheria	no rank	1	0
+1437183	Mesangiospermae	no rank	1	0
+1437201	Pentapetalae	no rank	4	0
+1437360	Bradyrhizobium erythrophlei	species	1	0
+1437877	Xanthomonas phaseoli pv. dieffenbachiae LMG 695	no rank	1	0
+146923	Streptomyces parvulus	species	0	1
+1495638	Streptomyces sp. M56	species	0	1
+1500392	uncultured bacterium 182_02_C03	species	0	1
+1500402	uncultured bacterium 182_16_J11	species	0	1
+1549855	Haematospirillum jordaniae	species	1	0
+155900	uncultured organism	species	1	0
+1565605	Rugosibacter aromaticivorans	species	2	0
+1603606	Desulfuromonas soudanensis	species	6	0
+161492	Anaeromyxobacter	genus	1	0
+1620215	Sulfuricaulis limicola	species	80	0
+1632864	Planctomyces sp. SH-PL14	species	1	0
+164348	Streptomyces puniciscabiei	species	0	1
+164851	uncultured soil bacterium	species	2	0
+165697	Sphingopyxis	genus	1	0
+1665058	uncultured Chloroflexi bacterium Rifle_16ft_4_minimus_1477	species	1	0
+1665206	uncultured proteobacterium Rifle_16ft_4_minimus_1560	species	1	0
+1675686	Sulfurifustis variabilis	species	2	0
+168471	Laribacter hongkongensis	species	1	0
+1695218	Paenibacillus sp. 32O-W	species	1	0
+1702325	Chelatococcus sp. CO-6	species	1	0
+171953	uncultured Acidobacteria bacterium	species	1	0
+1760	Actinobacteria	class	0	10
+1781346	uncultured bacterium gwa2_scaffold_14	species	1	0
+1810504	Immundisolibacter cernigliae	species	1	0
+1817	Nocardia	genus	1	0
+1837283	Streptomyces sp. S8	species	0	2
+1838286	Lacunisphaera limnophila	species	1	0
+1842537	Hydrogenophaga sp. RAC07	species	0	1
+1842539	Bosea sp. RAC05	species	1	0
+1847	Pseudonocardia	genus	1	0
+1851544	Orrella dioscoreae	species	1	0
+1855912	Luteitalea pratensis	species	1	0
+1871022	Libanicoccus massiliensis	species	1	0
+1873	Micromonospora	genus	0	1
+187303	Methylocystis sp. SC2	species	6	0
+188058	uncultured Burkholderia sp.	species	1	0
+1882682	Microvirga ossetica	species	1	0
+1882757	Streptomyces sp. 3214.6	species	0	1
+1883	Streptomyces	genus	4	49
+1889	Streptomyces ambofaciens	species	0	1
+189790	Tamarix canariensis	species	1	0
+189793	Tamarix hispida	species	1	0
+1904640	Betaproteobacteria bacterium GR16-43	species	3	0
+1909395	Nonomuraea sp. ATCC 55076	species	2	1
+191	Azospirillum	genus	2	0
+192	Azospirillum brasilense	species	1	0
+1932004	Haloarcula taiwanensis	species	1	0
+193462	Streptomyces niveus	species	0	33
+1936003	Phycisphaerae bacterium ST-NAGAB-D1	species	1	0
+1940	Streptomyces albireticuli	species	0	3
+196162	Nocardioides sp. JS614	species	2	2
+2	Bacteria	superkingdom	54	51
+2014920	Streptomyces capitiformicae	species	0	1
+2026799	Verrucomicrobia bacterium	species	1	0
+202907	Collimonas	genus	0	1
+203437	uncultured Gemmatimonadetes bacterium	species	1	0
+2045	Pimelobacter simplex	species	1	0
+2049881	Streptomyces dengpaensis	species	0	1
+2057741	Bradyrhizobium sp. SK17	species	2	0
+2062	Streptomycetaceae	family	0	10
+2067572	Pseudomonas sp. NC02	species	1	2
+206937	uncultured denitrifying bacterium	species	0	1
+207598	Homininae	subfamily	1	1
+216778	Stenotrophomonas rhizophila	species	1	1
+22	Shewanella	genus	1	0
+2213200	Nocardia sp. Y48	species	0	8
+224471	Burkholderiales Genera incertae sedis	no rank	1	0
+227882	Streptomyces avermitilis MA-4680 = NBRC 14893	no rank	0	1
+234612	Streptomyces sp. TN58	species	0	1
+24	Shewanella putrefaciens	species	0	1
+255045	Bradyrhizobium canariense	species	1	0
+257400	uncultured marine bacterium 580	species	1	0
+261654	Micromonospora auratinigra	species	1	0
+270351	Methylobacterium aquaticum	species	1	0
+271420	Pseudomonas xanthomarina	species	0	2
+2759	Eukaryota	superkingdom	6	0
+28095	Burkholderia gladioli	species	1	0
+28211	Alphaproteobacteria	class	4	0
+28216	Betaproteobacteria	class	8	8
+285473	Streptomyces rubrolavendulae	species	0	1
+286	Pseudomonas	genus	5	10
+292415	Thiobacillus denitrificans ATCC 25259	no rank	10	12
+294128	Hyalella azteca	species	1	0
+311403	Agrobacterium radiobacter K84	no rank	1	0
+314295	Hominoidea	superfamily	1	0
+316	Pseudomonas stutzeri	species	0	42
+316055	Rhodopseudomonas palustris BisA53	no rank	2	0
+316056	Rhodopseudomonas palustris BisB18	no rank	1	0
+32033	Xanthomonadaceae	family	0	2
+32524	Amniota	no rank	1	0
+33213	Bilateria	no rank	1	0
+337677	Cricetidae	family	1	0
+34033	environmental samples	no rank	1	0
+34034	uncultured delta proteobacterium	species	1	0
+34072	Variovorax	genus	1	0
+349124	Halorhodospira halophila SL1	no rank	1	0
+352	Azotobacter	genus	1	0
+3524	Caryophyllales	order	3	0
+356	Rhizobiales	order	2	0
+3573	Silene	genus	1	0
+364030	Thiomonas delicata	species	1	0
+365044	Polaromonas naphthalenivorans CJ2	no rank	1	0
+365046	Ramlibacter tataouinensis TTB310	no rank	1	0
+366394	Sinorhizobium medicae WSM419	no rank	1	0
+36861	Thiobacillus denitrificans	species	2	1
+374	Bradyrhizobium	genus	3	0
+379	Rhizobium	genus	1	0
+379731	Pseudomonas stutzeri A1501	no rank	0	1
+398527	Paraburkholderia phytofirmans PsJN	no rank	1	0
+398580	Dinoroseobacter shibae DFL 12 = DSM 16493	no rank	1	0
+40323	Stenotrophomonas	genus	0	1
+41294	Bradyrhizobiaceae	family	3	0
+414684	Rhodospirillum centenum SW	no rank	2	0
+420662	Methylibium petroleiphilum PM1	no rank	2	0
+446466	Cellulomonas flavigena DSM 20109	no rank	1	0
+454594	Xanthomonas citri pv. mangiferaeindicae	no rank	0	1
+475662	Halomonas beimenensis	species	1	0
+479435	Kribbella flavida DSM 17836	no rank	0	1
+48479	environmental samples	no rank	1	2
+536	Chromobacterium violaceum	species	0	1
+543	Enterobacteriaceae	family	1	0
+54571	Streptomyces venezuelae	species	1	4
+546874	Friedmanniella sagamiharensis	species	0	1
+56	Sorangium cellulosum	species	1	0
+57704	Tsukamurella tyrosinosolvens	species	2	0
+580332	Sideroxydans lithotrophicus ES-1	no rank	1	0
+585455	Thiohalobacter thiocyanaticus	species	2	0
+59538	Pantholops hodgsonii	species	1	0
+61434	Dehalococcoides	genus	1	0
+616991	Arenibacter algicola	species	0	1
+63084	Tamarix	genus	2	0
+63103	Tamarix pentandra	species	5	0
+63745	Sideroxydans lithotrophicus	species	4	0
+639005	Streptomyces sp. DSM 21069	species	0	10
+644801	Pseudomonas stutzeri RCH2	no rank	0	5
+653045	Streptomyces violaceusniger Tu 4113	no rank	0	1
+67329	Streptomyces minoensis	species	0	1
+674703	Rhodoplanes sp. Z2-YC6860	species	1	0
+675635	Pseudonocardia dioxanivorans CB1190	no rank	0	1
+68173	Kitasatospora albolonga	species	0	1
+68223	Streptomyces katrae	species	0	1
+68895	Cupriavidus basilensis	species	0	1
+69	Lysobacter enzymogenes	species	1	1
+698395	uncultured bacterium 98	species	2	0
+71275	rosids	no rank	1	0
+741155	Pseudomonas alcaliphila JAB1	no rank	1	0
+74201	Verrucomicrobia	phylum	1	0
+743299	Acidithiobacillus ferrivorans SS3	no rank	1	0
+743718	Isoptericola variabilis 225	no rank	1	0
+749414	Streptomyces bingchenggensis BCW-1	no rank	0	1
+76114	Aromatoleum aromaticum EbN1	no rank	1	1
+765909	Lamprocystis purpurea DSM 4197	no rank	1	0
+77133	uncultured bacterium	species	27	8
+78245	Xanthobacter autotrophicus Py2	no rank	1	0
+794903	Opitutaceae bacterium TAV5	species	1	0
+80812	Sorangiineae	suborder	0	1
+80840	Burkholderiales	order	4	0
+80864	Comamonadaceae	family	6	0
+80865	Delftia	genus	1	0
+82115	Rhizobiaceae	family	1	0
+85007	Corynebacteriales	order	0	1
+85413	Bosea	genus	1	0
+86027	uncultured beta proteobacterium	species	5	2
+89050	Streptomyces yeochonensis	species	0	1
+90627	Gallionellaceae	family	1	0
+9103	Meleagris gallopavo	species	0	1
+91347	Enterobacterales	order	0	1
+926	Thiomonas intermedia	species	0	2
+92644	Streptomyces malaysiensis	species	1	0
+927083	Sandaracinus amylolyticus	species	1	0
+931	Thiobacillus thioparus	species	1	0
+94122	Shewanella sp. ANA-3	species	1	0
+94132	Ramlibacter tataouinensis	species	0	1
+946333	Rhizobacter gummiphilus	species	2	0
+9526	Catarrhini	parvorder	1	0
+9606	Homo sapiens	species	3	1
+976	Bacteroidetes	phylum	1	0

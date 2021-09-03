@@ -12,7 +12,7 @@ ngsLCA_group(
 )
 }
 \arguments{
-\item{path}{working directory, same to 'ngsLCA_profile'.}
+\item{path}{working directory, same to \code{\link{ngsLCA_profile}}.}
 
 \item{run}{name of the run, default is "run01".}
 
@@ -24,7 +24,7 @@ ngsLCA_group(
 Group the combined taxa profile into user-defined taxa units. Results will be in 'pth/run/taxonomic_profiles/taxa_groups/'.
 }
 \examples{
-ngsLCA_group(path="working_directory/",
+ngsLCA_group(path=system.file("extdata","lca_files",package="ngsLCA"),
              run="run01",
              group.name="Viridiplantae,Metazoa",
              threshold.perGroup=0.01)
@@ -33,7 +33,7 @@ ngsLCA_group(path="working_directory/",
 ## from the combined taxa profile of 'run01', and filter
 ## these 2 taxa profiles by threshold.perGroup to generate 2
 ## files named "Viridiplantae.txt" and "Metazoa.txt" in
-## "working_directory/run01/taxonomic_profiles/taxa_groups/".
+## "extdata/lca_files/run01/taxonomic_profiles/taxa_groups/".
 
 
 }

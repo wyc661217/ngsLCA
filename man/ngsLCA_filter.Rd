@@ -14,7 +14,7 @@ ngsLCA_filter(
 )
 }
 \arguments{
-\item{path}{working directory, same to 'ngsLCA_profile'.}
+\item{path}{working directory, same to \code{\link{ngsLCA_profile}}.}
 
 \item{run}{name of the run, default is "run01".}
 
@@ -30,18 +30,18 @@ ngsLCA_filter(
 Filter the combined taxa profile. Running this function will update the existing 'complete_profile.txt'.
 }
 \examples{
-ngsLCA_filter(path="working_directory/",
+ngsLCA_filter(path=system.file("extdata","lca_files",package="ngsLCA"),
               run="run01",
               remove.taxa="1115501,10114",
               threshold.1=2,
               threshold.2=0,
-              threshold.3=5)
+              threshold.3=2)
 
 
-## This will filter and update the combined taxa profile
-## ('working_directory/run01/taxonomic_profiles/complete_profile.txt')
-## by removing taxaID 1115501 and 10114, and filtering by
-## the 3 thresholds supplied.
+## This will filter and update the combined taxa profile:
+## extdata/lca_files/run01/taxonomic_profiles/complete_profile.txt
+## by the 3 thresholds supplied, and by removing taxa with taxaID
+## 1115501 and 10114.
 
 
 }

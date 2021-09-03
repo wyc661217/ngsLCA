@@ -3,7 +3,7 @@
 #'
 #' @description Group the combined taxa profile into user-defined taxa units. Results will be in 'pth/run/taxonomic_profiles/taxa_groups/'.
 #'
-#' @param path working directory, same to 'ngsLCA_profile'.
+#' @param path working directory, same to \code{\link{ngsLCA_profile}}.
 #' @param run name of the run, default is "run01".
 #' @param group.name a comma seprated vector listing the taxonomic units that will be used for grouping taxa, need to be as the scientific names of NCBI taxonomy (https://www.ncbi.nlm.nih.gov/taxonomy); default is "Viruses,Archaea,Bacteria,Fungi,Viridiplantae,Metazoa".
 #' @param threshold.perGroup minimum reads percentage (to the total reads number of each group) required for confirming a taxon in each group of each sample, ranging from 0 to 1.
@@ -13,7 +13,7 @@
 #' @export
 #'
 #' @examples
-#' ngsLCA_group(path="working_directory/",
+#' ngsLCA_group(path=system.file("extdata","lca_files",package="ngsLCA"),
 #'              run="run01",
 #'              group.name="Viridiplantae,Metazoa",
 #'              threshold.perGroup=0.01)
@@ -22,7 +22,7 @@
 #' ## from the combined taxa profile of 'run01', and filter
 #' ## these 2 taxa profiles by threshold.perGroup to generate 2
 #' ## files named "Viridiplantae.txt" and "Metazoa.txt" in
-#' ## "working_directory/run01/taxonomic_profiles/taxa_groups/".
+#' ## "extdata/lca_files/run01/taxonomic_profiles/taxa_groups/".
 #'
 #'
 ngsLCA_group = function(path,

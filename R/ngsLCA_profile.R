@@ -6,7 +6,7 @@
 #' @param path working directory, which should contain lca files that will be processed.
 #' @param run run name, a folder that will be created for storing generated files and results; default is "run01".
 #' @param remove.sample a comma separated vector listing file names indicating samples that will NOT be included for analysis, optional.
-#' @param metadata path to sample metadata, an example at github.com/miwipe/ngsLCA/blob/master/R_script/metadata.txt, optional.
+#' @param metadata path to sample metadata, optional. The metadata should be a tab separated txt file, with the first column being lca file names, 2nd column being sample ID (sample names will be shown in the generated files), and 3rd column being age, depth, or the rank of samples (will be used for ordering samples in the generated files; must be numeric). An example for metadata can be found at github.com/miwipe/ngsLCA/blob/master/R_script/metadata.txt.
 #'
 #' @importFrom tidyr separate %>%
 #' @importFrom stats aggregate
@@ -14,23 +14,21 @@
 #' @export
 #'
 #' @examples
-#' ngsLCA_profile(path="working_directory/",
+#' ngsLCA_profile(path=system.file("extdata","lca_files",package="ngsLCA"),
 #'                run="run01",
-#'                remove.sample="sample1.lca,sample2",
-#'                metadata="path_to_metadata/metadata.txt")
+#'                metadata=system.file("extdata","sample_metadata.txt",package="ngsLCA"))
 #'
-#' ## This will combine all lca files in "working_directory/"
+#' ## This will combine all lca files in "extdata/lca_files/"
 #' ## to generate a file named 'complete_profile.txt' in
-#' ## 'working_directory/run01/taxonomic_profiles/', with
-#' ## replacing the file names by sample names supplied in
-#' ## metadata.txt, and removing sample1 and sample2.
+#' ## 'extdata/lca_files/run01/taxonomic_profiles', with
+#' ## replacing the file names by sample names supplied
+#' ## in sample_metadata.txt.
 #'
 #'
 ngsLCA_profile = function(path,
                           run="run01",
                           remove.sample=NULL,
                           metadata=NULL){
-
 
   #modify input path
   if (!grepl('/$', path)) {
@@ -59,7 +57,7 @@ ngsLCA_profile = function(path,
   for (i in 1:length(FileList)) {
 
     DF2.1 =  read.csv(paste(path, FileList[i], sep=""), header=F, sep="\t", stringsAsFactors=F, fill=T,
-                     col.names = paste0("V",seq_len(60)), skip=1)
+                     col.names = paste0("V",seq_len(60)), comment.char = "#")
 
     if(dim(DF2.1)[1]>0){
 
