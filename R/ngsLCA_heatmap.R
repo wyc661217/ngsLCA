@@ -141,12 +141,12 @@ ngsLCA_heatmap=function(path,
 
       Name = sub(".txt", "", file.list[i])
 
-      if (dim(X2)[2]>1) {
+      if (dim(X2)[2]>1 & dim(X2)[1]>1) {
         pdf(paste(path, run, "/heatmap/",Name,"_heatmap.pdf", sep=""), width=8, height=13)
         print({HeatMap(X2)})
         dev.off()
       } else {
-        cat(paste("\n\n\t-> Only one sample detected in ", file.list[i],", heatmap not generated for it.\n\n",sep = ""))
+        cat(paste("\n\n\t-> Only one sample or one taxon detected in ", file.list[i],", heatmap not generated for it.\n\n",sep = ""))
       }
     }
   }

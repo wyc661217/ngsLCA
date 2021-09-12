@@ -4,6 +4,7 @@
 * Windows with devtools::check_win_devel
 
 ## R CMD check results
+This is the first submission.
 There were no ERRORs, WARNINGs, or NOTEs.
 
 ## Downstream dependencies
