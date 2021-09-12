@@ -15,10 +15,10 @@
 #' @export
 #'
 #' @examples
-#' ngsLCA_NMDS(path=system.file("extdata","lca_files",package="ngsLCA"),
+#' \dontrun{ngsLCA_NMDS(path=system.file("extdata","lca_files",package="ngsLCA"),
 #'             run="run01",
 #'             dimension=3,
-#'             trymax=1000)
+#'             trymax=1000)}
 #'
 #'
 #' ## This will perform NMDS on the complete taxa
