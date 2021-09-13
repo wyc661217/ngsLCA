@@ -18,7 +18,7 @@ ngsLCA_filter(
 
 \item{run}{name of the run, default is "run01".}
 
-\item{remove.taxa}{a list of NCBI taxaID indicating taxa that will be removed. This can be a comma seprated vector or the path to a text file listing one taxaID in each line.}
+\item{remove.taxa}{a list of NCBI taxaID indicating taxa that will be removed. This can be a comma separated vector or the path to a text file listing one taxaID in each line.}
 
 \item{threshold.1}{minimum reads number required for confirming a taxon in each sample; default is 2.}
 

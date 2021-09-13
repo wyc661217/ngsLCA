@@ -16,12 +16,12 @@ ngsLCA_group(
 
 \item{run}{name of the run, default is "run01".}
 
-\item{group.name}{a comma seprated vector listing the taxonomic units that will be used for grouping taxa, need to be as the scientific names of NCBI taxonomy (https://www.ncbi.nlm.nih.gov/taxonomy); default is "Viruses,Archaea,Bacteria,Fungi,Viridiplantae,Metazoa".}
+\item{group.name}{a comma separated vector listing the taxonomic units that will be used for grouping taxa, need to be as the scientific names of NCBI taxonomy (https://www.ncbi.nlm.nih.gov/taxonomy); default is "Viruses,Archaea,Bacteria,Fungi,Viridiplantae,Metazoa".}
 
 \item{threshold.perGroup}{minimum reads percentage (to the total reads number of each group) required for confirming a taxon in each group of each sample, ranging from 0 to 1.}
 }
 \description{
-Group the combined taxa profile into user-defined taxa units. Results will be in 'pth/run/taxonomic_profiles/taxa_groups/'.
+Group the combined taxa profile into user-defined taxa units. Results will be in 'path/run/taxonomic_profiles/taxa_groups/'.
 }
 \examples{
 ngsLCA_group(path=system.file("extdata","lca_files",package="ngsLCA"),

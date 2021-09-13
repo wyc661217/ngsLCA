@@ -5,7 +5,7 @@
 #'
 #' @param path working directory, same to \code{\link{ngsLCA_profile}}.
 #' @param run name of the run, default is "run01".
-#' @param remove.taxa a list of NCBI taxaID indicating taxa that will be removed. This can be a comma seprated vector or the path to a text file listing one taxaID in each line.
+#' @param remove.taxa a list of NCBI taxaID indicating taxa that will be removed. This can be a comma separated vector or the path to a text file listing one taxaID in each line.
 #' @param threshold.1 minimum reads number required for confirming a taxon in each sample; default is 2.
 #' @param threshold.2 minimum read percentage (to the total reads number of a sample) required for confirming a taxon in each sample, ranging from 0 to 1; default is 0.
 #' @param threshold.3 minimum sum of reads across all samples required for confirming a taxon in the combined taxa profile; default is 5.

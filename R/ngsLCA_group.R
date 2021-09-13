@@ -1,11 +1,11 @@
 #'
 #' @title Group taxa in the combined taxa profile
 #'
-#' @description Group the combined taxa profile into user-defined taxa units. Results will be in 'pth/run/taxonomic_profiles/taxa_groups/'.
+#' @description Group the combined taxa profile into user-defined taxa units. Results will be in 'path/run/taxonomic_profiles/taxa_groups/'.
 #'
 #' @param path working directory, same to \code{\link{ngsLCA_profile}}.
 #' @param run name of the run, default is "run01".
-#' @param group.name a comma seprated vector listing the taxonomic units that will be used for grouping taxa, need to be as the scientific names of NCBI taxonomy (https://www.ncbi.nlm.nih.gov/taxonomy); default is "Viruses,Archaea,Bacteria,Fungi,Viridiplantae,Metazoa".
+#' @param group.name a comma separated vector listing the taxonomic units that will be used for grouping taxa, need to be as the scientific names of NCBI taxonomy (https://www.ncbi.nlm.nih.gov/taxonomy); default is "Viruses,Archaea,Bacteria,Fungi,Viridiplantae,Metazoa".
 #' @param threshold.perGroup minimum reads percentage (to the total reads number of each group) required for confirming a taxon in each group of each sample, ranging from 0 to 1.
 #'
 #' @importFrom tidyr separate %>%

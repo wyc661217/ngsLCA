@@ -5,7 +5,8 @@
 
 ## R CMD check results
 This is the first submission.
-There were no ERRORs, WARNINGs, or NOTEs.
+There were no ERRORs or WARNINGs.
+Only one NOTE reported by devtools::check_win_devel: checking CRAN incoming feasibility ... NOTE, which seems to be ignorable.
 
 ## Downstream dependencies
 There are currently no downstream dependencies for this package.
