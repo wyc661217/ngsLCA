@@ -1,7 +1,7 @@
 #'
-#' @title Generate taxa abundance heatmaps
+#' @title Generate Taxa Abundance Heatmaps
 #'
-#' @description Generate heatmaps for taxa profiles into 'path/run/heatmap/' to show the reads abundance of each taxon.
+#' @description Generate heatmaps for taxa profiles into "path/run/heatmap/" to show the reads abundance of each taxon.
 #'
 #' @param path working directory, same to \code{\link{ngsLCA_profile}}.
 #' @param run name of the run, default is "run01".
@@ -20,9 +20,9 @@
 #'
 #'
 #' ## This will generate heatmaps for the complete taxa profile
-#' ## as well as taxa groups and ranks (if available) of 'run01'
-#' ## in 'extdata/lca_files/run01/heatmap/', with showing the 20
-#' ## most abundant taxa in each profile.
+#' ## as well as taxa groups and ranks (if available) of "run01"
+#' ## in "path/run01/heatmap/", with showing the 20 most abundant
+#' ## taxa in each profile.
 #'
 #'
 ngsLCA_heatmap=function(path,

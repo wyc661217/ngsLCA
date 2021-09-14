@@ -2,7 +2,7 @@
 % Please edit documentation in R/ngsLCA_NMDS.R
 \name{ngsLCA_NMDS}
 \alias{ngsLCA_NMDS}
-\title{Taxa profiles NMDS}
+\title{Taxa Profiles NMDS}
 \usage{
 ngsLCA_NMDS(path, run = "run01", dimension = 3, trymax = 100)
 }
@@ -16,7 +16,7 @@ ngsLCA_NMDS(path, run = "run01", dimension = 3, trymax = 100)
 \item{trymax}{maximum number of random starts in search of convergent solutions for NMDS; default is 100.}
 }
 \description{
-Perform Non-metric Multidimensional Scaling (NMDS) on taxa profiles. Results will be in 'path/run/NMDS/'. See vegan::metaMDS for details.
+Perform Non-metric Multidimensional Scaling (NMDS) on taxa profiles. Results will be in "path/run/NMDS/". See vegan::metaMDS for details.
 }
 \examples{
 \dontrun{ngsLCA_NMDS(path=system.file("extdata","lca_files",package="ngsLCA"),
@@ -27,8 +27,8 @@ Perform Non-metric Multidimensional Scaling (NMDS) on taxa profiles. Results wil
 
 ## This will perform NMDS on the complete taxa
 ## profile as well as taxa groups and ranks
-## (if available) of run01'. Results will be in
-## 'extdata/lca_files/run01/NMDS/'.
+## (if available) of "run01". Results will be in
+## "path/run01/NMDS/".
 
 
 }

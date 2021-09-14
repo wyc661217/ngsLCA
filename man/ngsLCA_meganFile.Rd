@@ -2,7 +2,7 @@
 % Please edit documentation in R/ngsLCA_meganFile.R
 \name{ngsLCA_meganFile}
 \alias{ngsLCA_meganFile}
-\title{Generate Megan files}
+\title{Generate MEGAN Files}
 \usage{
 ngsLCA_meganFile(path, run = "run01")
 }
@@ -12,19 +12,19 @@ ngsLCA_meganFile(path, run = "run01")
 \item{run}{name of the run, default is "run01".}
 }
 \description{
-Generate files that can be inputted into Megan for taxa profiling. Results will be in 'path/run/megan/'
+Generate files that can be inputted into MEGAN for taxa profiling. Results will be in "path/run/megan/".
 }
 \examples{
 ngsLCA_meganFile(path=system.file("extdata","lca_files",package="ngsLCA"),
                  run="run01")
 
 
-## This will generate Megan format taxa profiles for
+## This will generate MEGAN format taxa profiles for
 ## the complete taxa profile as well as taxa groups
-## and ranks (if available) of 'run01'. Resutls will
-## be in extdata/lca_files/run01/megan/'. These files
-## can be directly used as input csv files in Megan
-## for taxa profiling.
+## and ranks (if available) of "run01". Resutls will
+## be in "path/run01/megan/". These files can be
+## directly used as input csv files in MEGAN for
+## taxa profiling.
 
 
 }

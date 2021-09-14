@@ -2,7 +2,7 @@
 % Please edit documentation in R/ngsLCA_stratplot.R
 \name{ngsLCA_stratplot}
 \alias{ngsLCA_stratplot}
-\title{Generate taxa abundance stratplots}
+\title{Generate Taxa Abundance Stratplots}
 \usage{
 ngsLCA_stratplot(path, run = "run01", taxa.number = 10)
 }
@@ -14,7 +14,7 @@ ngsLCA_stratplot(path, run = "run01", taxa.number = 10)
 \item{taxa.number}{maximum number of taxa will be shown in stratplots; default is 10.}
 }
 \description{
-Generate stratplots for taxa profiles into 'path/run/stratplot/' to show the reads abundance.
+Generate stratplots for taxa profiles into "path/run/stratplot/" to show the reads abundance.
 }
 \examples{
 ngsLCA_stratplot(path=system.file("extdata","lca_files",package="ngsLCA"),
@@ -23,9 +23,9 @@ ngsLCA_stratplot(path=system.file("extdata","lca_files",package="ngsLCA"),
 
 
 ## This will generate stratplots for the complete taxa profile
-## as well as taxa groups and ranks (if available) of 'run01',
+## as well as taxa groups and ranks (if available) of "run01",
 ## with showing the 10 most abundant taxa in each profile.
-## Results will be in 'extdata/lca_files/run01/stratplot/'.
+## Results will be in "path/run01/stratplot/".
 
 
 }

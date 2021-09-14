@@ -1,13 +1,13 @@
 #'
-#' @title Filter the combined taxa profile
+#' @title Filter the Combined Taxa Profile
 #'
-#' @description Filter the combined taxa profile. Running this function will update the existing 'complete_profile.txt'.
+#' @description Filter the combined taxa profile. Running this function will update the existing "complete_profile.txt".
 #'
 #' @param path working directory, same to \code{\link{ngsLCA_profile}}.
 #' @param run name of the run, default is "run01".
 #' @param remove.taxa a list of NCBI taxaID indicating taxa that will be removed. This can be a comma separated vector or the path to a text file listing one taxaID in each line.
 #' @param threshold.1 minimum reads number required for confirming a taxon in each sample; default is 2.
-#' @param threshold.2 minimum read percentage (to the total reads number of a sample) required for confirming a taxon in each sample, ranging from 0 to 1; default is 0.
+#' @param threshold.2 minimum read percentage (to the total reads number of a given sample) required for confirming a taxon in each sample, ranging from 0 to 1; default is 0.
 #' @param threshold.3 minimum sum of reads across all samples required for confirming a taxon in the combined taxa profile; default is 5.
 #'
 #' @importFrom tidyr separate %>%
@@ -24,9 +24,9 @@
 #'
 #'
 #' ## This will filter and update the combined taxa profile:
-#' ## extdata/lca_files/run01/taxonomic_profiles/complete_profile.txt
-#' ## by the 3 thresholds supplied, and by removing taxa with taxaID
-#' ## 1115501 and 10114.
+#' ## "path/run01/taxonomic_profiles/complete_profile.txt"
+#' ## by the 3 thresholds supplied, and by removing taxa
+#' ## with taxaID 1115501 and 10114.
 #'
 #'
 ngsLCA_filter = function(path,

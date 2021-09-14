@@ -2,7 +2,7 @@
 % Please edit documentation in R/ngsLCA_count.R
 \name{ngsLCA_count}
 \alias{ngsLCA_count}
-\title{Count reads and taxa numbers}
+\title{Count Reads and Taxa Numbers}
 \usage{
 ngsLCA_count(path, run = "run01")
 }
@@ -12,7 +12,7 @@ ngsLCA_count(path, run = "run01")
 \item{run}{name of the run, default is "run01".}
 }
 \description{
-Count the reads number and taxa number after each filtering and de-contamination, as well as in each taxa group. Results will be generated into 'path/run/counts/'
+Count the reads number and taxa number after each filtering and de-contaminating, as well as in each taxa group. Results will be generated into "path/run/counts/"
 }
 \examples{
 ngsLCA_count(path=system.file("extdata","lca_files",package="ngsLCA"),
@@ -21,7 +21,7 @@ ngsLCA_count(path=system.file("extdata","lca_files",package="ngsLCA"),
 
 ## This will generate tables and figures showing
 ## the numbers of reads and taxa for "run01". Results
-## will be in 'extdata/lca_files/run01/counts/'.
+## will be in "path/run01/counts/".
 
 
 }

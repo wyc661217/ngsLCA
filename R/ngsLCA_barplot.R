@@ -1,7 +1,7 @@
 #'
-#' @title Generate taxa abundance barplots
+#' @title Generate Taxa Abundance Barplots
 #'
-#' @description Generate barplots for taxa profiles into 'path/run/barplot/' to show the reads abundance.
+#' @description Generate barplots for taxa profiles into "path/run/barplot/" to show the reads abundance.
 #'
 #' @param path working directory, same to \code{\link{ngsLCA_profile}}.
 #' @param run name of the run, default is "run01".
@@ -19,9 +19,9 @@
 #'
 #'
 #' ## This will generate barplots for the complete taxa profile
-#' ## as well as taxa groups and ranks (if available) of 'run01'
-#' ## in 'extdata/lca_files/run01/barplot/', with showing the 10
-#' ## most abundant taxa in each profile.
+#' ## as well as taxa groups and ranks (if available) of "run01"
+#' ## in "path/run01/barplot/", with showing the 10 most abundant
+#' ## taxa in each profile.
 #'
 #'
 ngsLCA_barplot=function(path,

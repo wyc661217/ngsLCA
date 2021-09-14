@@ -2,7 +2,7 @@
 % Please edit documentation in R/ngsLCA_profile.R
 \name{ngsLCA_profile}
 \alias{ngsLCA_profile}
-\title{Generate a combined taxa profile}
+\title{Generate a Combined Taxa Profile}
 \usage{
 ngsLCA_profile(path, run = "run01", remove.sample = NULL, metadata = NULL)
 }
@@ -16,18 +16,17 @@ ngsLCA_profile(path, run = "run01", remove.sample = NULL, metadata = NULL)
 \item{metadata}{path to sample metadata, optional. The metadata should be a tab separated txt file, with the first column being lca file names, 2nd column being sample ID (sample names will be shown in the generated files), and 3rd column being age, depth, or the rank of samples (will be used for ordering samples in the generated files; must be numeric). An example for metadata can be found at 'system.file("extdata","sample_metadata.txt",package="ngsLCA")'.}
 }
 \description{
-Read lca files in the appointed directory to generate a combined taxa profile named 'complete_profile.txt' in folder 'path/run/taxonomic_profiles/'.
+Read lca files in the appointed directory to generate a combined taxa profile named "complete_profile.txt" in folder "path/run/taxonomic_profiles/".
 }
 \examples{
 ngsLCA_profile(path=system.file("extdata","lca_files",package="ngsLCA"),
                run="run01",
                metadata=system.file("extdata","sample_metadata.txt",package="ngsLCA"))
 
-## This will combine all lca files in "extdata/lca_files/"
-## to generate a file named 'complete_profile.txt' in
-## 'extdata/lca_files/run01/taxonomic_profiles', with
-## replacing the file names by sample names supplied
-## in sample_metadata.txt.
+## This will combine all lca files in "path/" to generate a file
+## named "complete_profile.txt" in path/run01/taxonomic_profiles",
+## with replacing the file names by sample names supplied in
+## "sample_metadata.txt".
 
 
 }

@@ -2,7 +2,7 @@
 % Please edit documentation in R/ngsLCA_rarefy.R
 \name{ngsLCA_rarefy}
 \alias{ngsLCA_rarefy}
-\title{Rarefaction taxa reads abundance}
+\title{Rarefaction Taxa Reads Abundance}
 \usage{
 ngsLCA_rarefy(path, run = "run01")
 }
@@ -12,7 +12,7 @@ ngsLCA_rarefy(path, run = "run01")
 \item{run}{name of the run, default is "run01".}
 }
 \description{
-Generate rarefaction curves for taxa profiles in 'path/run/rarefaction/'. See vegan::rarefy for details.
+Generate rarefaction curves for taxa profiles in "path/run/rarefaction/". See vegan::rarefy for details.
 }
 \examples{
 ngsLCA_rarefy(path=system.file("extdata","lca_files",package="ngsLCA"),
@@ -20,8 +20,8 @@ ngsLCA_rarefy(path=system.file("extdata","lca_files",package="ngsLCA"),
 
 ## This will generate rarefaction curves for the
 ## complete taxa profile as well as taxa groups
-## and ranks (if available) of 'run01'. Results
-## will be in 'extdata/lca_files/run01/rarefaction/'.
+## and ranks (if available) of "run01". Results
+## will be in "path/run01/rarefaction/".
 
 
 }

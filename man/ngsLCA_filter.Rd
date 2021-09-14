@@ -2,7 +2,7 @@
 % Please edit documentation in R/ngsLCA_filter.R
 \name{ngsLCA_filter}
 \alias{ngsLCA_filter}
-\title{Filter the combined taxa profile}
+\title{Filter the Combined Taxa Profile}
 \usage{
 ngsLCA_filter(
   path,
@@ -22,12 +22,12 @@ ngsLCA_filter(
 
 \item{threshold.1}{minimum reads number required for confirming a taxon in each sample; default is 2.}
 
-\item{threshold.2}{minimum read percentage (to the total reads number of a sample) required for confirming a taxon in each sample, ranging from 0 to 1; default is 0.}
+\item{threshold.2}{minimum read percentage (to the total reads number of a given sample) required for confirming a taxon in each sample, ranging from 0 to 1; default is 0.}
 
 \item{threshold.3}{minimum sum of reads across all samples required for confirming a taxon in the combined taxa profile; default is 5.}
 }
 \description{
-Filter the combined taxa profile. Running this function will update the existing 'complete_profile.txt'.
+Filter the combined taxa profile. Running this function will update the existing "complete_profile.txt".
 }
 \examples{
 ngsLCA_filter(path=system.file("extdata","lca_files",package="ngsLCA"),
@@ -39,9 +39,9 @@ ngsLCA_filter(path=system.file("extdata","lca_files",package="ngsLCA"),
 
 
 ## This will filter and update the combined taxa profile:
-## extdata/lca_files/run01/taxonomic_profiles/complete_profile.txt
-## by the 3 thresholds supplied, and by removing taxa with taxaID
-## 1115501 and 10114.
+## "path/run01/taxonomic_profiles/complete_profile.txt"
+## by the 3 thresholds supplied, and by removing taxa
+## with taxaID 1115501 and 10114.
 
 
 }

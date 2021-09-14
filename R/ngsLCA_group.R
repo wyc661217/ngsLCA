@@ -1,12 +1,12 @@
 #'
-#' @title Group taxa in the combined taxa profile
+#' @title Group Taxa in the Combined Taxa Profile
 #'
-#' @description Group the combined taxa profile into user-defined taxa units. Results will be in 'path/run/taxonomic_profiles/taxa_groups/'.
+#' @description Group the combined taxa profile into user-defined taxa units. Results will be in "path/run/taxonomic_profiles/taxa_groups/".
 #'
 #' @param path working directory, same to \code{\link{ngsLCA_profile}}.
 #' @param run name of the run, default is "run01".
-#' @param group.name a comma separated vector listing the taxonomic units that will be used for grouping taxa, need to be as the scientific names of NCBI taxonomy (https://www.ncbi.nlm.nih.gov/taxonomy); default is "Viruses,Archaea,Bacteria,Fungi,Viridiplantae,Metazoa".
-#' @param threshold.perGroup minimum reads percentage (to the total reads number of each group) required for confirming a taxon in each group of each sample, ranging from 0 to 1.
+#' @param group.name a comma separated vector listing the taxonomic units that will be used for grouping taxa, need to be as the scientific names of NCBI taxonomy <https://www.ncbi.nlm.nih.gov/taxonomy>; default is "Viruses,Archaea,Bacteria,Fungi,Viridiplantae,Metazoa".
+#' @param threshold.perGroup minimum reads percentage (to the total reads number of each group) required for confirming a taxon in each group of each sample, ranging from 0 to 1; default is 0.
 #'
 #' @importFrom tidyr separate %>%
 #' @importFrom utils read.csv write.table
@@ -19,10 +19,10 @@
 #'              threshold.perGroup=0.01)
 #'
 #' ## This will extract all taxa under Viridiplantae and Metazoa
-#' ## from the combined taxa profile of 'run01', and filter
+#' ## from the combined taxa profile of "run01", and filter
 #' ## these 2 taxa profiles by threshold.perGroup to generate 2
 #' ## files named "Viridiplantae.txt" and "Metazoa.txt" in
-#' ## "extdata/lca_files/run01/taxonomic_profiles/taxa_groups/".
+#' ## "path/run01/taxonomic_profiles/taxa_groups/".
 #'
 #'
 ngsLCA_group = function(path,

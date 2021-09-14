@@ -1,7 +1,7 @@
 #'
-#' @title Remove contamination taxa
+#' @title Remove Contamination Taxa
 #'
-#' @description Generate a contamination list from blank control lca files, and subtract listed taxa from the combined taxa profile. Running this function will update the existing 'complete_profile.txt'.
+#' @description Generate a contamination list from blank control lca files, and subtract listed taxa from the combined taxa profile. Running this function will update the existing "complete_profile.txt".
 #'
 #' @param path working directory, same to \code{\link{ngsLCA_profile}}.
 #' @param run name of the run, default is "run01".

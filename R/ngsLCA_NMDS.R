@@ -1,7 +1,7 @@
 #'
-#' @title Taxa profiles NMDS
+#' @title Taxa Profiles NMDS
 #'
-#' @description Perform Non-metric Multidimensional Scaling (NMDS) on taxa profiles. Results will be in 'path/run/NMDS/'. See vegan::metaMDS for details.
+#' @description Perform Non-metric Multidimensional Scaling (NMDS) on taxa profiles. Results will be in "path/run/NMDS/". See vegan::metaMDS for details.
 #'
 #' @param path working directory, same to \code{\link{ngsLCA_profile}}.
 #' @param run name of the run, default is "run01".
@@ -23,8 +23,8 @@
 #'
 #' ## This will perform NMDS on the complete taxa
 #' ## profile as well as taxa groups and ranks
-#' ## (if available) of run01'. Results will be in
-#' ## 'extdata/lca_files/run01/NMDS/'.
+#' ## (if available) of "run01". Results will be in
+#' ## "path/run01/NMDS/".
 #'
 #'
 ngsLCA_NMDS=function(path,

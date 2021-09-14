@@ -2,7 +2,7 @@
 % Please edit documentation in R/ngsLCA_deContam.R
 \name{ngsLCA_deContam}
 \alias{ngsLCA_deContam}
-\title{Remove contamination taxa}
+\title{Remove Contamination Taxa}
 \usage{
 ngsLCA_deContam(
   path,
@@ -27,7 +27,7 @@ ngsLCA_deContam(
 \item{threshold.3_control}{for generating contamination list, minimum sum of reads across all blank controls required for keeping a taxon; default is 5.}
 }
 \description{
-Generate a contamination list from blank control lca files, and subtract listed taxa from the combined taxa profile. Running this function will update the existing 'complete_profile.txt'.
+Generate a contamination list from blank control lca files, and subtract listed taxa from the combined taxa profile. Running this function will update the existing "complete_profile.txt".
 }
 \examples{
 ngsLCA_deContam(path=system.file("extdata","lca_files",package="ngsLCA"),

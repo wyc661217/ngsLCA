@@ -1,7 +1,7 @@
 #'
-#' @title Generate a combined taxa profile
+#' @title Generate a Combined Taxa Profile
 #'
-#' @description Read lca files in the appointed directory to generate a combined taxa profile named 'complete_profile.txt' in folder 'path/run/taxonomic_profiles/'.
+#' @description Read lca files in the appointed directory to generate a combined taxa profile named "complete_profile.txt" in folder "path/run/taxonomic_profiles/".
 #'
 #' @param path working directory, which should contain lca files that will be processed.
 #' @param run run name, a folder that will be created for storing generated files and results; default is "run01".
@@ -18,11 +18,10 @@
 #'                run="run01",
 #'                metadata=system.file("extdata","sample_metadata.txt",package="ngsLCA"))
 #'
-#' ## This will combine all lca files in "extdata/lca_files/"
-#' ## to generate a file named 'complete_profile.txt' in
-#' ## 'extdata/lca_files/run01/taxonomic_profiles', with
-#' ## replacing the file names by sample names supplied
-#' ## in sample_metadata.txt.
+#' ## This will combine all lca files in "path/" to generate a file
+#' ## named "complete_profile.txt" in path/run01/taxonomic_profiles",
+#' ## with replacing the file names by sample names supplied in
+#' ## "sample_metadata.txt".
 #'
 #'
 ngsLCA_profile = function(path,

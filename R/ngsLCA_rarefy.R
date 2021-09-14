@@ -1,7 +1,7 @@
 #'
-#' @title Rarefaction taxa reads abundance
+#' @title Rarefaction Taxa Reads Abundance
 #'
-#' @description Generate rarefaction curves for taxa profiles in 'path/run/rarefaction/'. See vegan::rarefy for details.
+#' @description Generate rarefaction curves for taxa profiles in "path/run/rarefaction/". See vegan::rarefy for details.
 #'
 #' @param path working directory, same to \code{\link{ngsLCA_profile}}.
 #' @param run name of the run, default is "run01".
@@ -17,8 +17,8 @@
 #'
 #' ## This will generate rarefaction curves for the
 #' ## complete taxa profile as well as taxa groups
-#' ## and ranks (if available) of 'run01'. Results
-#' ## will be in 'extdata/lca_files/run01/rarefaction/'.
+#' ## and ranks (if available) of "run01". Results
+#' ## will be in "path/run01/rarefaction/".
 #'
 #'
 ngsLCA_rarefy=function(path,

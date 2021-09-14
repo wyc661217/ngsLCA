@@ -1,7 +1,7 @@
 #'
-#' @title Count reads and taxa numbers
+#' @title Count Reads and Taxa Numbers
 #'
-#' @description Count the reads number and taxa number after each filtering and de-contamination, as well as in each taxa group. Results will be generated into 'path/run/counts/'
+#' @description Count the reads number and taxa number after each filtering and de-contaminating, as well as in each taxa group. Results will be generated into "path/run/counts/"
 #'
 #' @param path working directory, same to \code{\link{ngsLCA_profile}}.
 #' @param run name of the run, default is "run01".
@@ -17,7 +17,7 @@
 #'
 #' ## This will generate tables and figures showing
 #' ## the numbers of reads and taxa for "run01". Results
-#' ## will be in 'extdata/lca_files/run01/counts/'.
+#' ## will be in "path/run01/counts/".
 #'
 #'
 ngsLCA_count=function(path,

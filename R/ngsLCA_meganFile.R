@@ -1,7 +1,7 @@
 #'
-#' @title Generate Megan files
+#' @title Generate MEGAN Files
 #'
-#' @description Generate files that can be inputted into Megan for taxa profiling. Results will be in 'path/run/megan/'
+#' @description Generate files that can be inputted into MEGAN for taxa profiling. Results will be in "path/run/megan/".
 #'
 #' @param path working directory, same to \code{\link{ngsLCA_profile}}.
 #' @param run name of the run, default is "run01".
@@ -14,12 +14,12 @@
 #'                  run="run01")
 #'
 #'
-#' ## This will generate Megan format taxa profiles for
+#' ## This will generate MEGAN format taxa profiles for
 #' ## the complete taxa profile as well as taxa groups
-#' ## and ranks (if available) of 'run01'. Resutls will
-#' ## be in extdata/lca_files/run01/megan/'. These files
-#' ## can be directly used as input csv files in Megan
-#' ## for taxa profiling.
+#' ## and ranks (if available) of "run01". Resutls will
+#' ## be in "path/run01/megan/". These files can be
+#' ## directly used as input csv files in MEGAN for
+#' ## taxa profiling.
 #'
 #'
 ngsLCA_meganFile=function(path,

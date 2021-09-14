@@ -1,7 +1,7 @@
 #'
-#' @title Generate taxa abundance stratplots
+#' @title Generate Taxa Abundance Stratplots
 #'
-#' @description Generate stratplots for taxa profiles into 'path/run/stratplot/' to show the reads abundance.
+#' @description Generate stratplots for taxa profiles into "path/run/stratplot/" to show the reads abundance.
 #'
 #' @param path working directory, same to \code{\link{ngsLCA_profile}}.
 #' @param run name of the run, default is "run01".
@@ -21,9 +21,9 @@
 #'
 #'
 #' ## This will generate stratplots for the complete taxa profile
-#' ## as well as taxa groups and ranks (if available) of 'run01',
+#' ## as well as taxa groups and ranks (if available) of "run01",
 #' ## with showing the 10 most abundant taxa in each profile.
-#' ## Results will be in 'extdata/lca_files/run01/stratplot/'.
+#' ## Results will be in "path/run01/stratplot/".
 #'
 #'
 ngsLCA_stratplot=function(path,
