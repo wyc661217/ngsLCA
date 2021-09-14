@@ -1,10 +1,10 @@
 Package: ngsLCA
 Type: Package
-Title: ngsLCA R package: process the lca files
+Title: Process and visualize lca files and taxonomic profiles
 Version: 0.1.0
 Author: Yucheng Wang <wyc661217@gmail.com>
 Maintainer: Yucheng Wang <wyc661217@gmail.com>
-Description: Provides functionality for processing lca files and illustrating the taxonomic profiles.
+Description: This is the ngsLCA R package, which provides functionality for processing lca files and visualizing taxonomic profiles. The main ngsLCA program for generating lca files is available at github.com/miwipe/ngsLCA. 
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
