@@ -6,6 +6,7 @@
 #' @param path working directory, same to \code{\link{ngsLCA_profile}}.
 #' @param run name of the run, default is "run01".
 #'
+#' @return Figures for rarefaction scales and rarefaction curves.
 #' @importFrom vegan rarefy specnumber rarecurve
 #' @importFrom utils read.csv
 #' @importFrom graphics abline
@@ -51,7 +52,7 @@ ngsLCA_rarefy=function(path,
       raremax = min(rowSums(DF1))
       Srare = rarefy(DF1, raremax)
       #
-      pdf(paste(path, run, "/rarefaction/", OutName, "_rarefy_scaling.pdf", sep=""), width=12, height=8)
+      pdf(paste(path, run, "/rarefaction/", OutName, "_rarefy_scale.pdf", sep=""), width=12, height=8)
       plot(S, Srare, xlab = "Observed No. of taxa", ylab = "Rarefied No. of taxa")
       abline(0, 1)
       dev.off()

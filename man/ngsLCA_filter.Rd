@@ -26,6 +26,9 @@ ngsLCA_filter(
 
 \item{threshold.3}{minimum sum of reads across all samples required for confirming a taxon in the combined taxa profile; default is 5.}
 }
+\value{
+An updated complete_profile.txt (after taxa filters).
+}
 \description{
 Filter the combined taxa profile. Running this function will update the existing "complete_profile.txt".
 }

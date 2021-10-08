@@ -8,6 +8,7 @@
 #' @param dimension dimension of the NMDS; default is 3.
 #' @param trymax maximum number of random starts in search of convergent solutions for NMDS; default is 100.
 #'
+#' @return R data files for NMDS results, figures for NMDS stressplots, cluster figures for the first 2 NMDS components.
 #' @importFrom vegan metaMDS stressplot
 #' @importFrom  grDevices pdf dev.off
 #' @importFrom utils read.csv

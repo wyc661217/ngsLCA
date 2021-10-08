@@ -7,6 +7,7 @@
 #' @param run name of the run, default is "run01".
 #' @param taxa.number maximum number of taxa will be shown in stratplots; default is 10.
 #'
+#' @return Taxa abundance stratplots.
 #' @import ggplot2
 #' @importFrom ggpubr ggarrange
 #' @importFrom utils read.csv

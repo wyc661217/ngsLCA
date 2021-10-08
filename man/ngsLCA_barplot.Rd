@@ -13,6 +13,9 @@ ngsLCA_barplot(path, run = "run01", taxa.number = 10)
 
 \item{taxa.number}{maximum number of taxa will be shown in barplots; default is 10.}
 }
+\value{
+Taxa abundance barplots.
+}
 \description{
 Generate barplots for taxa profiles into "path/run/barplot/" to show the reads abundance.
 }

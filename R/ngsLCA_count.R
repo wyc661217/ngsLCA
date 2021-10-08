@@ -6,6 +6,7 @@
 #' @param path working directory, same to \code{\link{ngsLCA_profile}}.
 #' @param run name of the run, default is "run01".
 #'
+#' @return Text files and figures showing reads number and taxa number.
 #' @import ggplot2
 #' @importFrom utils read.csv read.delim write.table
 #' @export

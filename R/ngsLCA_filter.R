@@ -10,6 +10,7 @@
 #' @param threshold.2 minimum read percentage (to the total reads number of a given sample) required for confirming a taxon in each sample, ranging from 0 to 1; default is 0.
 #' @param threshold.3 minimum sum of reads across all samples required for confirming a taxon in the combined taxa profile; default is 5.
 #'
+#' @return An updated complete_profile.txt (after taxa filters).
 #' @importFrom tidyr separate %>%
 #' @importFrom utils read.csv read.delim write.table
 #' @export

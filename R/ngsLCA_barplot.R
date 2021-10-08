@@ -7,6 +7,7 @@
 #' @param run name of the run, default is "run01".
 #' @param taxa.number maximum number of taxa will be shown in barplots; default is 10.
 #'
+#' @return Taxa abundance barplots.
 #' @import ggplot2
 #' @importFrom reshape melt
 #' @importFrom utils read.csv

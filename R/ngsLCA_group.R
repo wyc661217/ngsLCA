@@ -8,6 +8,7 @@
 #' @param group.name a comma separated vector listing the taxonomic units that will be used for grouping taxa, need to be as the scientific names of NCBI taxonomy <https://www.ncbi.nlm.nih.gov/taxonomy>; default is "Viruses,Archaea,Bacteria,Fungi,Viridiplantae,Metazoa".
 #' @param threshold.perGroup minimum reads percentage (to the total reads number of each group) required for confirming a taxon in each group of each sample, ranging from 0 to 1; default is 0.
 #'
+#' @return Taxa profiles grouped into taxa units.
 #' @importFrom tidyr separate %>%
 #' @importFrom utils read.csv write.table
 #' @export

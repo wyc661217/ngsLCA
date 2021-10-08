@@ -7,6 +7,7 @@
 #' @param run name of the run, default is "run01".
 #' @param rank.name a comma separated vector listing the taxonomic ranks that will be used for classifying taxa profiles; default is "species,genus,family"
 #'
+#' @return Taxa profiles clustered into taxa ranks.
 #' @importFrom tidyr separate %>%
 #' @importFrom utils read.csv write.table
 #' @export

@@ -6,6 +6,7 @@
 #' @param path working directory, same to \code{\link{ngsLCA_profile}}.
 #' @param run name of the run, default is "run01".
 #'
+#' @return MEGAN input taxa profiles.
 #' @importFrom utils read.csv write.table
 #' @export
 #'
