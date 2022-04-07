@@ -111,7 +111,7 @@ ngsLCA_heatmap=function(path,
                 sep="\t", quote="", check.names=F,stringsAsFactors=F)
   X2 = dataPrep(X1)
   
-  if (dim(DF)[2]>1) {
+  if (dim(X2)[2]>1) {
     pdf(paste(path, run, "/heatmap/complete_profile_heatmap.pdf", sep=""), width=8, height=13)
     print({HeatMap(X2)})
     dev.off()
