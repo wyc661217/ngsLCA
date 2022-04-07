@@ -29,14 +29,14 @@
 ngsLCA_heatmap=function(path,
                         run="run01",
                         taxa.number=30){
-
-
+  
+  
   #modify input path
   if (!grepl('/$', path)) {
     path = paste(path,"/",sep="")
   }
-
-
+  
+  
   #whether ngsLCA_profile performed
   if (length(dir(paste(path, run, "/intermediate/", sep=""), pattern =  "taxa_profile_v1.txt")) == 0) {
     cat(paste("\n\n\t-> Error: required input file not found under '", run, "' folder, please run 'ngsLCA_profile' first.\n\n",
@@ -45,8 +45,8 @@ ngsLCA_heatmap=function(path,
   }else{
     cat("\n\n\t-> Generate heatmaps.\n\n")
   }
-
-
+  
+  
   #function for heatmap
   HeatMap = function(DF){
     #transfer data into percentage and subset
@@ -57,13 +57,13 @@ ngsLCA_heatmap=function(path,
     }
     DF$sum = rowSums(DF)
     DF = DF[order(-DF$sum),]
-
+    
     if (dim(DF)[1] > taxa.number) {
       DF = DF[1:taxa.number,-dim(DF)[2]]
     } else{
       DF = DF[,-dim(DF)[2]]
     }
-
+    
     DF = as.matrix(DF)
     F1 = Heatmap(DF, column_dend_height = unit(1.5, "cm"), row_dend_width = unit(3, "cm"), show_row_names = T, show_column_names = T,
                  row_names_gp = gpar(cex=0.8), column_names_gp = gpar(cex=0.8), cluster_rows = T, cluster_columns= F,
@@ -75,11 +75,11 @@ ngsLCA_heatmap=function(path,
                                              legend_height = unit(10, "cm"), color_bar = "continous"))
     return(F1)
   }
-
-
+  
+  
   #function for preparing data
   dataPrep = function(DF){
-
+    
     if (length(which(duplicated(DF[,2])))>0) {
       N=which(DF[,2] %in% DF[which(duplicated(DF[,2])),2])
       DF[N,2] = paste(DF[N,2],DF[N,3],sep="_")
@@ -88,29 +88,29 @@ ngsLCA_heatmap=function(path,
         DF[N,2] = paste(DF[N,1],DF[N,2],sep="_")
       }
     }
-
+    
     row.names(DF) = DF[,2]
     DF2 = as.data.frame(DF[,-c(1:3)])
     colnames(DF2) = colnames(DF)[-c(1:3)]
     rownames(DF2) = rownames(DF)
-
+    
     return(DF2)
   }
-
-
+  
+  
   #create folder
   if (length(dir(paste(path, run, sep = ""), pattern = "heatmap")) > 0) {
     cat(paste("\n\n\t-> '", path, run, "/heatmap' already exists; files inside will be overwritten.\n\n", sep = ""))
   }else{
     dir.create(paste(path, run, "/heatmap", sep=""))
   }
-
-
+  
+  
   #generate heapmaps
   X1 = read.csv(paste(path, run, "/taxonomic_profiles/complete_profile.txt", sep=""),
                 sep="\t", quote="", check.names=F,stringsAsFactors=F)
   X2 = dataPrep(X1)
-
+  
   if (dim(DF)[2]>1) {
     pdf(paste(path, run, "/heatmap/complete_profile_heatmap.pdf", sep=""), width=8, height=13)
     print({HeatMap(X2)})
@@ -118,19 +118,19 @@ ngsLCA_heatmap=function(path,
   }else{
     cat("\n\n\t-> Only one sample detected, heatmap cannot be generated.\n\n")
   }
-
+  
   if (length(dir(paste(path, run, "/taxonomic_profiles/taxa_ranks",sep=""), pattern = ".txt"))>0){
-
+    
     file.list = dir(paste(path, run, "/taxonomic_profiles/taxa_ranks",sep=""), pattern = ".txt")
-
+    
     for (i in 1:length(file.list)) {
-
+      
       X1 = read.csv(paste(path, run, "/taxonomic_profiles/taxa_ranks/", file.list[i], sep=""),
                     sep="\t", quote="",check.names=F,stringsAsFactors=F)
       X2 = dataPrep(X1)
-
+      
       Name = sub(".txt", "", file.list[i])
-
+      
       if (dim(X2)[2]>1 & dim(X2)[1]>1) {
         pdf(paste(path, run, "/heatmap/",Name,"_heatmap.pdf", sep=""), width=8, height=13)
         print({HeatMap(X2)})
