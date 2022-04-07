@@ -65,25 +65,14 @@ ngsLCA_heatmap=function(path,
     }
 
     DF = as.matrix(DF)
-    if (length(which(colSums(DF) == 0))>0) {
-      F1 = Heatmap(DF, column_dend_height = unit(1.5, "cm"), row_dend_width = unit(3, "cm"), show_row_names = T, show_column_names = T,
-                   row_names_gp = gpar(cex=0.8), column_names_gp = gpar(cex=0.8), cluster_rows = T, cluster_columns= F,
-                   clustering_distance_rows = "pearson", clustering_distance_columns = "euclidean",
-                   col = colorRamp2(c(0, 0.001, 0.01, 0.03, 0.06, 0.2),
-                                    c("white", "cornflowerblue", "yellow", "#FD8D3C","#E31A1C","#B10026")),
-                   rect_gp = gpar(col = "gray12", lty = 1, lwd = 0.5),
-                   heatmap_legend_param = list(title = "abundance", title_gp = gpar(fontsize = 8), labels_gp = gpar(fontsize = 8),
-                                               legend_height = unit(10, "cm"), color_bar = "continous"))
-    }else{
-      F1 = Heatmap(DF, column_dend_height = unit(1.5, "cm"), row_dend_width = unit(3, "cm"), show_row_names = T, show_column_names = T,
-                   row_names_gp = gpar(cex=0.8), column_names_gp = gpar(cex=0.8), cluster_rows = T, cluster_columns= T,
-                   clustering_distance_rows = "pearson",clustering_distance_columns = "euclidean",
-                   col = colorRamp2(c(0, 0.001, 0.01, 0.03, 0.06, 0.2),
-                                    c("white", "cornflowerblue", "yellow", "#FD8D3C","#E31A1C","#B10026")),
-                   rect_gp = gpar(col = "gray12", lty = 1, lwd = 0.5),
-                   heatmap_legend_param = list(title = "abundance", title_gp = gpar(fontsize = 8), labels_gp = gpar(fontsize = 8),
-                                               legend_height = unit(10, "cm"), color_bar = "continous"))
-    }
+    F1 = Heatmap(DF, column_dend_height = unit(1.5, "cm"), row_dend_width = unit(3, "cm"), show_row_names = T, show_column_names = T,
+                 row_names_gp = gpar(cex=0.8), column_names_gp = gpar(cex=0.8), cluster_rows = T, cluster_columns= F,
+                 clustering_distance_rows = "pearson", clustering_distance_columns = "euclidean",
+                 col = colorRamp2(c(0, 0.001, 0.01, 0.03, 0.06, 0.2),
+                                  c("white", "cornflowerblue", "yellow", "#FD8D3C","#E31A1C","#B10026")),
+                 rect_gp = gpar(col = "gray12", lty = 1, lwd = 0.5),
+                 heatmap_legend_param = list(title = "abundance", title_gp = gpar(fontsize = 8), labels_gp = gpar(fontsize = 8),
+                                             legend_height = unit(10, "cm"), color_bar = "continous"))
     return(F1)
   }
 
@@ -122,7 +111,7 @@ ngsLCA_heatmap=function(path,
                 sep="\t", quote="", check.names=F,stringsAsFactors=F)
   X2 = dataPrep(X1)
 
-  if (dim(X2)[2]>1) {
+  if (dim(DF)[2]>1) {
     pdf(paste(path, run, "/heatmap/complete_profile_heatmap.pdf", sep=""), width=8, height=13)
     print({HeatMap(X2)})
     dev.off()
