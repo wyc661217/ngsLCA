@@ -11,7 +11,6 @@
 #' @param threshold.3 minimum sum of reads across all samples required for confirming a taxon in the combined taxa profile; default is 5.
 #'
 #' @return An updated complete_profile.txt (after taxa filters).
-#' @importFrom tidyr separate %>%
 #' @importFrom utils read.csv read.delim write.table
 #' @export
 #'
@@ -153,7 +152,12 @@ ngsLCA_filter = function(path,
     write.table(DF2.3, file = paste(path, run, "/intermediate/", "taxa_profile_final.txt", sep=""), quote=F,
                 row.names=F, col.names=T, sep="\t")
 
-    DF3 = DF2.3 %>% separate(taxa, sep=":", c("taxa_ID","taxa_name","taxonomic_rank"))
+    DF3 = DF2.3
+    taxa_split = strsplit(DF2.3$taxa, ":")
+    DF3$taxa_ID = sapply(taxa_split, function(x) x[1])
+    DF3$taxa_name = sapply(taxa_split, function(x) paste(x[2:(length(x)-1)], collapse = ":"))
+    DF3$taxonomic_rank = sapply(taxa_split, function(x) x[length(x)])
+    DF3 = DF3[,c((dim(DF3)[2] - 2):dim(DF3)[2],2:(dim(DF3)[2] - 3))]
     write.table(DF3, file = paste(path, run, "/taxonomic_profiles/", "complete_profile.txt", sep=""), quote=F,
                 row.names=F, col.names=T, sep="\t")
 
