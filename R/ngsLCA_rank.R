@@ -63,13 +63,13 @@ ngsLCA_rank=function(path,
     }
 
     PATH = read.csv(paste(path, FileList[1], sep=""), header=F, sep="\t", stringsAsFactors=F,
-                    fill=T, col.names = paste0("V",seq_len(60)),comment.char = "#")
+                    fill=T, col.names = paste0("V",seq_len(60)), skip = 1)
     PATH = PATH[,-1]
 
     if (length(FileList)>1) {
       for (i in 2:length(FileList)) {
         PATH.1 = read.csv(paste(path, FileList[i], sep=""), header=F, sep="\t", stringsAsFactors=F,
-                          fill=T, col.names = paste0("V",seq_len(60)),comment.char = "#")
+                          fill=T, col.names = paste0("V",seq_len(60)), skip = 1)
         PATH.1 = PATH.1[,-1]
         PATH = rbind(PATH,PATH.1)
         PATH = PATH[!duplicated(PATH[,1]),]
