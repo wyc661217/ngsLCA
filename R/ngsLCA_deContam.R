@@ -11,7 +11,6 @@
 #' @param threshold.3_control for generating contamination list, minimum sum of reads across all blank controls required for keeping a taxon; default is 5.
 #'
 #' @return An updated complete_profile.txt (after removing contaminations).
-#' @importFrom tidyr separate %>%
 #' @importFrom utils read.csv read.delim write.table
 #' @export
 #'
