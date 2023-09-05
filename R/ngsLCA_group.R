@@ -9,7 +9,6 @@
 #' @param threshold.perGroup minimum reads percentage (to the total reads number of each group) required for confirming a taxon in each group of each sample, ranging from 0 to 1; default is 0.
 #'
 #' @return Taxa profiles grouped into taxa units.
-#' @importFrom tidyr separate %>%
 #' @importFrom utils read.csv write.table
 #' @export
 #'
@@ -126,7 +125,12 @@ ngsLCA_group = function(path,
       write.table(DF2, file = paste(path, run, "/intermediate/taxa_groups/", name$taxa[i], ".txt", sep=""), quote=F,
                   row.names=F, col.names=T, sep="\t")
 
-      DF2.1 = DF2 %>% separate(taxa, sep=":", c("taxa_ID","taxa_name","taxonomic_rank"))
+      DF2.1 = DF2
+      taxa_split = strsplit(DF2$taxa, ":")
+      DF2.1$taxa_ID = sapply(taxa_split, function(x) x[1])
+      DF2.1$taxa_name = sapply(taxa_split, function(x) paste(x[2:(length(x)-1)], collapse = ":"))
+      DF2.1$taxonomic_rank = sapply(taxa_split, function(x) x[length(x)])
+      DF2.1 = DF2.1[,c((dim(DF2.1)[2] - 2):dim(DF2.1)[2],2:(dim(DF2.1)[2] - 3))]
       write.table(DF2.1, file = paste(path, run, "/taxonomic_profiles/taxa_groups/", name$taxa[i], ".txt", sep=""),
                   quote=F,row.names=F, col.names=T, sep="\t")
     }else{
