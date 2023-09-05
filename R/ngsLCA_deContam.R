@@ -173,7 +173,12 @@ ngsLCA_deContam = function(path,
     write.table(DF2.3, file = paste(path, run, "/intermediate/", "contamination_list_v2.3.txt", sep=""), quote=F,
                 row.names=F, col.names=T, sep="\t")
 
-    DF2.4 = DF2.3 %>% separate(taxa, sep=":", c("taxa_ID","taxa_name","taxonomic_rank"))
+    DF2.4 = DF2.3
+    taxa_split = strsplit(DF2.3$taxa, ":")
+    DF2.4$taxa_ID = sapply(taxa_split, function(x) x[1])
+    DF2.4$taxa_name = sapply(taxa_split, function(x) paste(x[2:(length(x)-1)], collapse = ":"))
+    DF2.4$taxonomic_rank = sapply(taxa_split, function(x) x[length(x)])
+    DF2.4 = DF2.4[,c((dim(DF2.4)[2] - 2):dim(DF2.4)[2],2:(dim(DF2.4)[2] - 3))]
     write.table(DF2.4, file = paste(path, run, "/taxonomic_profiles/", "contamination_list.txt", sep=""), quote=F,
                 row.names=F, col.names=T, sep="\t")
 
@@ -206,7 +211,12 @@ ngsLCA_deContam = function(path,
     write.table(DF2, file = paste(path, run, "/intermediate/", "taxa_profile_final.txt", sep=""), quote=F,
                 row.names=F, col.names=T, sep="\t")
 
-    DF3 = DF2 %>% separate(taxa, sep=":", c("taxa_ID","taxa_name","taxonomic_rank"))
+    DF3 = DF2
+    taxa_split = strsplit(DF2$taxa, ":")
+    DF3$taxa_ID = sapply(taxa_split, function(x) x[1])
+    DF3$taxa_name = sapply(taxa_split, function(x) paste(x[2:(length(x)-1)], collapse = ":"))
+    DF3$taxonomic_rank = sapply(taxa_split, function(x) x[length(x)])
+    DF3 = DF3[,c((dim(DF3)[2] - 2):dim(DF3)[2],2:(dim(DF3)[2] - 3))]
     write.table(DF3, file = paste(path, run, "/taxonomic_profiles/", "complete_profile.txt", sep=""), quote=F,
                 row.names=F, col.names=T, sep="\t")
 
