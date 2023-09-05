@@ -9,7 +9,6 @@
 #' @param metadata path to sample metadata, optional. The metadata should be a tab separated txt file, with the first column being lca file names, 2nd column being sample ID (sample names will be shown in the generated files), and 3rd column being age, depth, or the rank of samples (will be used for ordering samples in the generated files; must be numeric). An example for metadata can be found at 'system.file("extdata","sample_metadata.txt",package="ngsLCA")'.
 #'
 #' @return A combined taxa profile named by complete_profile.txt.
-#' @importFrom tidyr separate %>%
 #' @importFrom stats aggregate
 #' @importFrom utils read.csv write.table
 #' @export
