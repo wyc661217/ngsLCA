@@ -8,7 +8,6 @@
 #' @param rank.name a comma separated vector listing the taxonomic ranks that will be used for classifying taxa profiles; default is "species,genus,family"
 #'
 #' @return Taxa profiles clustered into taxa ranks.
-#' @importFrom tidyr separate %>%
 #' @importFrom utils read.csv write.table
 #' @export
 #'
@@ -117,7 +116,12 @@ ngsLCA_rank=function(path,
 
     if (dim(DF1)[1] != 0) {
       DF2 = aggregate(. ~ taxa, data = DF1, sum)
-      DF2 = DF2 %>% separate(taxa, sep=":", c("taxa_ID","taxa_name","taxonomic_rank"))
+      taxa_split = strsplit(DF2$taxa, ":") 
+      DF2$taxa_ID = sapply(taxa_split, function(x) x[1])
+      DF2$taxa_name = sapply(taxa_split, function(x) paste(x[2:(length(x)-1)], collapse = ":"))
+      DF2$taxonomic_rank = sapply(taxa_split, function(x) x[length(x)])
+      DF2 = DF2[,c((dim(DF2)[2] - 2):dim(DF2)[2],2:(dim(DF2)[2] - 3))]
+      
       write.table(DF2, quote=F, row.names=F, col.names=T, sep="\t",
                   file = paste(path, run, "/taxonomic_profiles/taxa_ranks/", OutName, "_",taxa.level, ".txt", sep=""))
     }else{
