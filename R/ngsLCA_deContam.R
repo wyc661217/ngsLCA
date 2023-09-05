@@ -83,7 +83,7 @@ ngsLCA_deContam = function(path,
       for (i in 1:length(FileList)) {
 
         CON2.1 =  read.csv(paste(control_path, FileList[i], sep=""), header=F, sep="\t", stringsAsFactors=F, fill=T,
-                          col.names = paste0("V",seq_len(60)), comment.char = "#")
+                          col.names = paste0("V",seq_len(60)), skip = 1)
 
         if(dim(CON2.1)[1]>0){
 
