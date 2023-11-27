@@ -56,7 +56,7 @@ ngsLCA_profile = function(path,
   for (i in 1:length(FileList)) {
     
     DF2.1 =  read.csv(paste(path, FileList[i], sep=""), header=F, sep="\t", stringsAsFactors=F, fill=T,
-                      col.names = paste0("V",seq_len(60)), skip = 1)
+                      col.names = paste0("V",seq_len(60)), skip = 1, quote = "#")
     
     if(dim(DF2.1)[1]>0){
       
