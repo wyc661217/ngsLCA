@@ -49,7 +49,7 @@ ngsLCA_count=function(path,
   DF1 = read.delim(paste(path, run, "/intermediate/", "taxa_profile_v1.txt", sep=""),
                    stringsAsFactors=FALSE,header = T,check.names = F)
   ReadNO = data.frame(sample=c(colnames(DF1)[-1]),
-                      original_Reads=colSums(DF1[,-1]),
+                      original_Reads=colSums(DF1[-1]),
                       stringsAsFactors = F)
 
   for (i in 2:dim(DF1)[2]) {
