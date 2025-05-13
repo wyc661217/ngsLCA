@@ -56,7 +56,7 @@ ngsLCA_count=function(path,
     DF1[which(DF1[,i] > 0),i] = 1
   }
   TaxaNO =  data.frame(sample=c(colnames(DF1)[-1]),
-                       taxa_in_original_lca=colSums(DF1[,-1]),
+                       taxa_in_original_lca=colSums(DF1[-1]),
                        stringsAsFactors = F)
 
 
@@ -116,14 +116,14 @@ ngsLCA_count=function(path,
 
       DF = read.csv(paste(path, run, "/intermediate/taxa_groups/", file.list[i], sep=""),sep="\t",
                     quote="", check.names=F,stringsAsFactors=F)
-      ReadNO$new = colSums(DF[,-1])
+      ReadNO$new = colSums(DF[-1])
       colnames(ReadNO)[dim(ReadNO)[2]] = sub(".txt", "", file.list[i])
 
       for (j in 2:dim(DF)[2]) {
         DF[which(DF[,j] > 0),j] = 1
       }
 
-      TaxaNO$new = colSums(DF[,-1])
+      TaxaNO$new = colSums(DF[-1])
       colnames(TaxaNO)[dim(TaxaNO)[2]] = sub(".txt", "", file.list[i])
     }
   }
