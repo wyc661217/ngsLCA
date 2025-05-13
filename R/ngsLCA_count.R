@@ -49,14 +49,14 @@ ngsLCA_count=function(path,
   DF1 = read.delim(paste(path, run, "/intermediate/", "taxa_profile_v1.txt", sep=""),
                    stringsAsFactors=FALSE,header = T,check.names = F)
   ReadNO = data.frame(sample=c(colnames(DF1)[-1]),
-                      original_Reads=colSums(DF1[,-1]),
+                      original_Reads=colSums(DF1[,-1,drop = FALSE]),
                       stringsAsFactors = F)
 
   for (i in 2:dim(DF1)[2]) {
     DF1[which(DF1[,i] > 0),i] = 1
   }
   TaxaNO =  data.frame(sample=c(colnames(DF1)[-1]),
-                       taxa_in_original_lca=colSums(DF1[,-1]),
+                       taxa_in_original_lca=colSums(DF1[,-1,drop = FALSE]),
                        stringsAsFactors = F)
 
 
@@ -70,9 +70,9 @@ ngsLCA_count=function(path,
     DF2.3 = read.delim(paste(path, run, "/intermediate/", "taxa_profile_v2.3.txt", sep=""),
                        stringsAsFactors=FALSE,header = T,check.names = F)
 
-    ReadNO$passed_threshold.1 = colSums(DF2.1[,-1])
-    ReadNO$passed_threshold.2 = colSums(DF2.2[,-1])
-    ReadNO$passed_threshold.3 = colSums(DF2.3[,-1])
+    ReadNO$passed_threshold.1 = colSums(DF2.1[,-1,drop = FALSE])
+    ReadNO$passed_threshold.2 = colSums(DF2.2[,-1,drop = FALSE])
+    ReadNO$passed_threshold.3 = colSums(DF2.3[,-1,drop = FALSE])
 
     for (i in 2:dim(DF1)[2]) {
       DF2.1[which(DF2.1[,i] > 0),i] = 1
@@ -80,9 +80,9 @@ ngsLCA_count=function(path,
       DF2.3[which(DF2.3[,i] > 0),i] = 1
     }
 
-    TaxaNO$passed_threshold.1 = colSums(DF2.1[,-1])
-    TaxaNO$passed_threshold.2 = colSums(DF2.2[,-1])
-    TaxaNO$passed_threshold.3 = colSums(DF2.3[,-1])
+    TaxaNO$passed_threshold.1 = colSums(DF2.1[,-1,drop = FALSE])
+    TaxaNO$passed_threshold.2 = colSums(DF2.2[,-1,drop = FALSE])
+    TaxaNO$passed_threshold.3 = colSums(DF2.3[,-1,drop = FALSE])
   }
 
 
@@ -91,12 +91,12 @@ ngsLCA_count=function(path,
 
     DF3 = read.delim(paste(path, run, "/intermediate/", "taxa_profile_v3.txt", sep=""),
                      stringsAsFactors=FALSE,header = T,check.names = F)
-    ReadNO$contaminate_removed = colSums(DF3[,-1])
+    ReadNO$contaminate_removed = colSums(DF3[,-1,drop = FALSE])
 
     for (i in 2:dim(DF1)[2]) {
       DF3[which(DF3[,i] > 0),i] = 1
     }
-    TaxaNO$contaminate_removed = colSums(DF3[,-1])
+    TaxaNO$contaminate_removed = colSums(DF3[,-1,drop = FALSE])
   }
 
 
@@ -116,14 +116,14 @@ ngsLCA_count=function(path,
 
       DF = read.csv(paste(path, run, "/intermediate/taxa_groups/", file.list[i], sep=""),sep="\t",
                     quote="", check.names=F,stringsAsFactors=F)
-      ReadNO$new = colSums(DF[,-1])
+      ReadNO$new = colSums(DF[,-1,drop = FALSE])
       colnames(ReadNO)[dim(ReadNO)[2]] = sub(".txt", "", file.list[i])
 
       for (j in 2:dim(DF)[2]) {
         DF[which(DF[,j] > 0),j] = 1
       }
 
-      TaxaNO$new = colSums(DF[,-1])
+      TaxaNO$new = colSums(DF[,-1,drop = FALSE])
       colnames(TaxaNO)[dim(TaxaNO)[2]] = sub(".txt", "", file.list[i])
     }
   }
